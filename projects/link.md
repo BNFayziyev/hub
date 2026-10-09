@@ -32,4 +32,5 @@
 
 ## Tarix
 - 2026-10-09 | Claude | DESKTOP-QA8B43G | QR poster + qalamcha tahrir, profil xabarlari (TG bot + Web Push), buyurtmada erkin son va minimal miqdor
+- 2026-10-09 | Claude | DESKTOP-QA8B43G | Prod: build + Vizitka xizmati qayta ishga tushirildi (DB zaxira: data/backup-2026-10-09)
 - 2026-10-08 | Claude | DESKTOP-QA8B43G | Karta yaratildi (README/package.json asosida, chuqur tahlil qilinmagan)
