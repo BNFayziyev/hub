@@ -9,7 +9,7 @@ Avval shu jadvalni o'qing, keyin faqat kerakli kartani oching. Qoidalar: [AGENTS
 | [faceID_manager](projects/faceID_manager.md) | FaceID davomat platformasi (server) | `C:\faceID_manager` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-08 |
 | [kattabaza-main](projects/kattabaza-main.md) | kattabaza.uz — dasturlar/VPN/servislar markazi | `C:\kattabaza-main` (DESKTOP-QA8B43G) | prod | 2026-10-08 |
 | [kattabaza_promo](projects/kattabaza_promo.md) | Time KattaBaza promo video (Remotion) | `C:\kattabaza_promo` (DESKTOP-QA8B43G) | ishlab chiqilmoqda? | 2026-10-08 |
-| [link](projects/link.md) | Vizitka — raqamli vizitka platformasi | `C:\link` (DESKTOP-QA8B43G) | ishlab chiqilmoqda? | 2026-10-08 |
+| [link](projects/link.md) | Vizitka — raqamli vizitka platformasi | `C:\link` (DESKTOP-QA8B43G) | ishlab chiqilmoqda? | 2026-10-09 |
 | [monitoring](projects/monitoring.md) | Mijoz qurilmalari monitoringi (MikroTik) | `C:\monitoring` (DESKTOP-QA8B43G) | boshlang'ich | 2026-10-08 |
 | [bronbar](projects/bronbar.md) | BronBar — sartaroshxona bron platformasi | `C:\s` (DESKTOP-QA8B43G) | MVP | 2026-10-08 |
 | [synapse](projects/synapse.md) | synapseit.uz korporativ 3D sayt | `C:\synapse` (DESKTOP-QA8B43G) | prod | 2026-10-08 |
