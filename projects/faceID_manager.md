@@ -3,7 +3,7 @@
 **Bir jumlada:** Markaziy server: veb platforma, Telegram bot va barcha ofislardan kelgan davomat ma'lumotlari; bitta server ko'p kompaniyaga xizmat qiladi.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\faceID_manager` · Git: yo'q · Domen/URL: time.kattabaza.uz (?)
 **Holat:** ishlayapti?
-**Oxirgi yangilanish:** 2026-10-08
+**Oxirgi yangilanish:** 2026-10-09
 
 ## Stack
 - FastAPI (backend), Next.js (frontend), aiogram (Telegram bot), PostgreSQL, Caddy (HTTPS), Docker Compose
@@ -30,3 +30,4 @@
 
 ## Tarix
 - 2026-10-08 | Claude | DESKTOP-QA8B43G | Karta yaratildi (README/package.json asosida, chuqur tahlil qilinmagan)
+- 2026-10-09 | Claude | DESKTOP-QA8B43G | Adams +8 zona va rasmsiz loglar tahlili: sabab client kalit xatosi (client 1.8.2 da tuzatildi)
