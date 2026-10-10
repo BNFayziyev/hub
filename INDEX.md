@@ -17,7 +17,7 @@ Avval shu jadvalni o'qing, keyin faqat kerakli kartani oching. Qoidalar: [AGENTS
 | [vizitka_promo](projects/vizitka_promo.md) | Vizitka promo video (Remotion) | `C:\vizitka_promo` (DESKTOP-QA8B43G) | v1 tayyor | 2026-10-09 |
 | [synapse](projects/synapse.md) | synapseit.uz korporativ 3D sayt | `C:\synapse` (DESKTOP-QA8B43G) | prod | 2026-10-10 |
 | [synapse_promo](projects/synapse_promo.md) | SYNAPSE promo video (RU, Remotion + sintez saundtrek) | `C:\synapse\video` (DESKTOP-QA8B43G) | qoralama tayyor | 2026-10-10 |
-| [synapse_instagram](projects/synapse_instagram.md) | Instagram @synapseit.uz — profil, kontent, API orqali joylash | `C:\synapse\instagram` (DESKTOP-QA8B43G) | boshlang'ich | 2026-10-10 |
+| [synapse_instagram](projects/synapse_instagram.md) | Instagram @synapseit.uz — profil, kontent, API orqali joylash | `C:\synapse\instagram` (DESKTOP-QA8B43G) | ishlab chiqilmoqda (API ulandi) | 2026-10-10 |
 | [treyler](projects/treyler.md) | Treyler Nazorat (GPS, turib qolganlar) | `C:\treyler` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-08 |
 | [usbot](projects/usbot.md) | 3x-ui monitoring Telegram boti | `C:\usbot` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-08 |
 | [x-ui](projects/x-ui.md) | 3x-ui VPN panel (tayyor dastur) | `C:\x-ui` (DESKTOP-QA8B43G) | ishlayapti | 2026-10-08 |
