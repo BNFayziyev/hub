@@ -2,7 +2,7 @@
 
 **Bir jumlada:** SYNAPSE MChJ ning Instagram sahifasi — profil, post tayyorlash (HTML → JPEG) va Instagram API orqali joylash.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\synapse\instagram` · Git: yo'q · Domen/URL: instagram.com/synapseit.uz
-**Holat:** ishlab chiqilmoqda (API ulandi, 1-post tayyor, joylanmagan)
+**Holat:** ishlayapti (API orqali 1-post chiqdi)
 **Oxirgi yangilanish:** 2026-10-10
 
 ## Stack
@@ -25,11 +25,11 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 
 ## Hozirgi holat
 - Token ishlaydi (2026-10-10 tekshirildi), synapseit.uz/ig/ orqali hosting Cloudflare'dan o'tadi
-- `posts/01-tanishuv` — 5 slaydli karusel + matn tayyor, egasi tasdig'ini kutmoqda
+- `posts/01-tanishuv` — 5 slaydli karusel CHIQDI 2026-10-10: https://www.instagram.com/p/DeU9bgZGu76/
 - Akkauntda 2026-10-09 dagi 1 ta Reel bor (foydalanuvchi o'zi joylagan)
 
 ## Keyingi qadamlar
-- [ ] 01-tanishuv ni tasdiqlash → `publish --go`
+- [ ] 01-tanishuv ni profil tepasiga pin qilish (qo'lda — API qila olmaydi)
 - [ ] Profil: ism/bio (UZ tanlandi), avatar-b, havolalar — foydalanuvchi qo'lda
 - [ ] 02 xizmatlar, 03 loyihalar karusellari; promo Reel 9:16
 - [ ] 2026-10-12 dan keyin `data/refresh.log` ni tekshirish (vazifa birinchi marta ishlaganmi)
@@ -53,3 +53,4 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | ig.mjs (API: check/render/publish/media/refresh), token tekshirildi, 01-tanishuv karuseli tayyor
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | @synapse_bo1 olib tashlandi → Telegram @beekhasanov; 4-slaydda AI yordamchi o'rniga Xavfsizlik tekshiruvi
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | 4-slayd: Time (FaceID davomat), Samsara Bot, "…va yana"; token yangilash vazifasi SynapseIG-TokenRefresh
+- 2026-10-10 | Claude | DESKTOP-QA8B43G | 01-tanishuv API orqali joylandi (karusel, 5 slayd), foydalanuvchi tasdigi bilan
