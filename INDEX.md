@@ -16,7 +16,7 @@ Avval shu jadvalni o'qing, keyin faqat kerakli kartani oching. Qoidalar: [AGENTS
 | [bronbar](projects/bronbar.md) | BronBar — sartaroshxona bron platformasi | `C:\s` (DESKTOP-QA8B43G) | prod (MVP), bron.kattabaza.uz | 2026-10-09 |
 | [vizitka_promo](projects/vizitka_promo.md) | Vizitka promo video (Remotion) | `C:\vizitka_promo` (DESKTOP-QA8B43G) | v1 tayyor | 2026-10-09 |
 | [synapse](projects/synapse.md) | synapseit.uz korporativ 3D sayt | `C:\synapse` (DESKTOP-QA8B43G) | prod | 2026-10-08 |
-| [synapse_promo](projects/synapse_promo.md) | SYNAPSE promo video (RU, Remotion + sintez saundtrek) | `C:\synapseideo` (DESKTOP-QA8B43G) | qoralama tayyor | 2026-10-10 |
+| [synapse_promo](projects/synapse_promo.md) | SYNAPSE promo video (RU, Remotion + sintez saundtrek) | `C:\synapse\video` (DESKTOP-QA8B43G) | qoralama tayyor | 2026-10-10 |
 | [treyler](projects/treyler.md) | Treyler Nazorat (GPS, turib qolganlar) | `C:\treyler` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-08 |
 | [usbot](projects/usbot.md) | 3x-ui monitoring Telegram boti | `C:\usbot` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-08 |
 | [x-ui](projects/x-ui.md) | 3x-ui VPN panel (tayyor dastur) | `C:\x-ui` (DESKTOP-QA8B43G) | ishlayapti | 2026-10-08 |
