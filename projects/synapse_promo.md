@@ -29,7 +29,7 @@ Kerakli `.env` kalitlari (faqat nomlari): `ELEVENLABS_API_KEY`, `ELEVEN_VOICE_ID
 - [ ] (ixtiyoriy) ElevenLabs Music bilan orkestr musiqasi; 9:16 vertikal versiya
 
 ## Muhim qarorlar
-- Server soni 32+ (foydalanuvchi talabi, 2026-10-10); saytda hali 23+ turibdi (?)
+- Server soni 32+ (foydalanuvchi talabi, 2026-10-10) — saytda ham 32+
 - Diktor so'zlari va ekrandagi matn so'z vaqtlari (TTS word timestamps) bo'yicha sinxron
 
 ## Ehtiyot bo'ling
