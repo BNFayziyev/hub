@@ -4,7 +4,7 @@ Avval shu jadvalni o'qing, keyin faqat kerakli kartani oching. Qoidalar: [AGENTS
 
 | Loyiha | Nima | Yo'l (kompyuter) | Holat | Yangilangan |
 |---|---|---|---|---|
-| [bo1ai](projects/bo1ai.md) | Telegram yordamchi (2-ishchi), javob variantlari taklif qiladi | `C:\bo1ai` (DESKTOP-QA8B43G) | ishlab chiqilmoqda? | 2026-10-08 |
+| [bo1ai](projects/bo1ai.md) | Telegram yordamchi (2-ishchi), javob variantlari, xodimlar statistikasi | `C:\bo1ai` (DESKTOP-QA8B43G) | ishlayapti (prod, fon rejimi) | 2026-10-10 |
 | [botchat](projects/botchat.md) | bot.kattabaza.uz — botlarni Telegram Plus'dagidek boshqarish (Mini App, cheksiz bot) | `C:\botchat` (DESKTOP-QA8B43G) | ishlab chiqilmoqda | 2026-10-09 |
 | [faceID_client](projects/faceID_client.md) | Ofis clienti: Hikvision → server | `C:\faceID_client` (DESKTOP-QA8B43G) | ishlayapti, v1.8.2 build (tarqatilmagan) | 2026-10-09 |
 | [faceID_manager](projects/faceID_manager.md) | FaceID davomat platformasi (server) | `C:\faceID_manager` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-09 |
