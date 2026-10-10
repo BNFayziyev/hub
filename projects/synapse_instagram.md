@@ -17,6 +17,7 @@
 - Rasm URL: publish JPEG'ni `C:\synapse\dist\ig\<tasodifiy>\` ga qo'yadi → `https://synapseit.uz/ig/...`, joylangach o'chiradi
 - Reels: resumable upload (URL kerak emas)
 - `profile.md` — ism, bio, havolalar; `brand/avatar-*.png`
+- `refresh-token.cmd` ← Windows vazifasi `SynapseIG-TokenRefresh` (har dushanba 10:00, foydalanuvchi sessiyasida, `conhost --headless`), log: `data/refresh.log`
 
 ## Ishga tushirish
 `cd C:\synapse\instagram && npm install && node ig.mjs check` (batafsil README.md)
@@ -31,7 +32,7 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 - [ ] 01-tanishuv ni tasdiqlash → `publish --go`
 - [ ] Profil: ism/bio (UZ tanlandi), avatar-b, havolalar — foydalanuvchi qo'lda
 - [ ] 02 xizmatlar, 03 loyihalar karusellari; promo Reel 9:16
-- [ ] Token yangilash avtomatik (haftalik `node ig.mjs refresh`) — 60 kunda tugaydi
+- [ ] 2026-10-12 dan keyin `data/refresh.log` ni tekshirish (vazifa birinchi marta ishlaganmi)
 - [ ] Telegram orqali tasdiqlash (preview + ✅ tugma)
 
 ## Muhim qarorlar
@@ -39,8 +40,10 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 - Murojaat: Telegram @beekhasanov (Behzod Hasanov), tel +998 90 665 67 00; @synapse_bo1 Instagram'da UMUMAN ishlatilmaydi (2026-10-10); Bobirjon kontaktlari yo'q
 - Har bir post faqat foydalanuvchi tasdig'idan keyin `--go` bilan chiqadi
 - Slaydlarda o'zbekcha ʻ (U+02BB): toʻliq, oʻz
+- Mahsulot nomi: "Time — FaceID davomat platformasi" ("KattaBaza Time" EMAS); 4-slayd: Time, Trailer Watch, Samsara Bot, Xavfsizlik tekshiruvi + "…va yana" (foydalanuvchi, 2026-10-10)
 
 ## Ehtiyot bo'ling
+- Instagram ustida ishlaganda synapseit.uz SAYTGA va promo videoga TEGMANG (foydalanuvchi, 2026-10-10) — saytda @synapse_bo1 hali bor, bu alohida qaror
 - Instagram'da ism 14 kunda faqat 2 marta o'zgaradi
 - API bio/highlight/pin/musiqani o'zgartira olmaydi — bular qo'lda
 - API faqat JPEG rasm qabul qiladi; `npm run build` (sayt) dist/ni tozalaydi — joylash paytida build qilmang
@@ -49,3 +52,4 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | Loyiha ochildi: bio (UZ/RU), ism, havolalar, avatar 2 variant
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | ig.mjs (API: check/render/publish/media/refresh), token tekshirildi, 01-tanishuv karuseli tayyor
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | @synapse_bo1 olib tashlandi → Telegram @beekhasanov; 4-slaydda AI yordamchi o'rniga Xavfsizlik tekshiruvi
+- 2026-10-10 | Claude | DESKTOP-QA8B43G | 4-slayd: Time (FaceID davomat), Samsara Bot, "…va yana"; token yangilash vazifasi SynapseIG-TokenRefresh
