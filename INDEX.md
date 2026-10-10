@@ -8,6 +8,7 @@ Avval shu jadvalni o'qing, keyin faqat kerakli kartani oching. Qoidalar: [AGENTS
 | [botchat](projects/botchat.md) | bot.kattabaza.uz — botlarni Telegram Plus'dagidek boshqarish (Mini App, cheksiz bot) | `C:\botchat` (DESKTOP-QA8B43G) | ishlab chiqilmoqda | 2026-10-09 |
 | [faceID_client](projects/faceID_client.md) | Ofis clienti: Hikvision → server | `C:\faceID_client` (DESKTOP-QA8B43G) | ishlayapti, v1.8.2 build (tarqatilmagan) | 2026-10-09 |
 | [faceID_manager](projects/faceID_manager.md) | FaceID davomat platformasi (server) | `C:\faceID_manager` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-09 |
+| [hubweb](projects/hubweb.md) | hub.kattabaza.uz — hub kartalarini ko'rish/tahrirlash platformasi | `C:\hubweb` (DESKTOP-QA8B43G) | ishlab chiqilmoqda | 2026-10-10 |
 | [kattabaza-main](projects/kattabaza-main.md) | kattabaza.uz — dasturlar/VPN/servislar markazi | `C:\kattabaza-main` (DESKTOP-QA8B43G) | prod | 2026-10-08 |
 | [kattabaza_promo](projects/kattabaza_promo.md) | Time KattaBaza promo video (Remotion) | `C:\kattabaza_promo` (DESKTOP-QA8B43G) | ishlab chiqilmoqda? | 2026-10-08 |
 | [link](projects/link.md) | Vizitka — raqamli vizitka platformasi | `C:\link` (DESKTOP-QA8B43G) | ishlab chiqilmoqda? | 2026-10-09 |
