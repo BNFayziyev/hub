@@ -36,7 +36,7 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 
 ## Muhim qarorlar
 - Bio — o'zbekcha, avatar — B (yashil fon) (foydalanuvchi, 2026-10-10)
-- Aloqa ma'lumotlari saytdagi bilan bir xil (Behzod Hasanov, @synapse_bo1); Bobirjon kontaktlari yo'q
+- Murojaat: Telegram @beekhasanov (Behzod Hasanov), tel +998 90 665 67 00; @synapse_bo1 Instagram'da UMUMAN ishlatilmaydi (2026-10-10); Bobirjon kontaktlari yo'q
 - Har bir post faqat foydalanuvchi tasdig'idan keyin `--go` bilan chiqadi
 - Slaydlarda o'zbekcha ʻ (U+02BB): toʻliq, oʻz
 
@@ -48,3 +48,4 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 ## Tarix
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | Loyiha ochildi: bio (UZ/RU), ism, havolalar, avatar 2 variant
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | ig.mjs (API: check/render/publish/media/refresh), token tekshirildi, 01-tanishuv karuseli tayyor
+- 2026-10-10 | Claude | DESKTOP-QA8B43G | @synapse_bo1 olib tashlandi → Telegram @beekhasanov; 4-slaydda AI yordamchi o'rniga Xavfsizlik tekshiruvi
