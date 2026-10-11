@@ -42,8 +42,10 @@
 - `.env` da maxfiy kalitlar — hubga yozilmaydi. VM paroli `vm\vm-credentials.txt`
 - Vaqtlar kompyuter soati (America/New_York); mijozlar asosan 07–18 da yozadi
 - Claude obuna limiti tez tugaydi — keraksiz sinov chaqiruvlaridan saqlaning
+- `CLAUDE_CODE_OAUTH_TOKEN` `C:\synapse\instagram\.env` da ham ishlatiladi (Reels bot, kuniga 1–3 so'rov) — token yangilansa u yerda ham yangilang
 - Windows yangilanishi kompyuterni qayta yuklaydi — avtomatik ishga tushish logonga bog'liq
 
 ## Tarix
 - 2026-10-08 | Claude | DESKTOP-QA8B43G | Karta yaratildi (README/package.json asosida, chuqur tahlil qilinmagan)
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | Statistika/eslatma/hisobot, aqlli IT-guruh eskalatsiyasi, nazoratchi, fon rejimi, Claude limitini reset vaqtigacha kutish; karta to'ldirildi
+- 2026-10-11 | Claude | DESKTOP-QA8B43G | Eslatma: Claude tokeni synapse_instagram (Reels bot) bilan umumiy (bo1ai kodi o'zgarmadi)
