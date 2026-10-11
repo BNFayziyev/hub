@@ -7,7 +7,8 @@
 
 ## Stack
 - Node 24 (`.ts` to'g'ridan-to'g'ri), Fastify 5, SQLite `node:sqlite`, grammy, React 18 + Vite 6, MapLibre GL
-- treyler bilan bir xil uslub (ko'p kompaniya, Telegram kirish, AES-256-GCM shifrlangan kalitlar), KattaBaza logo/ikonkalar, PWA
+- treyler bilan bir xil uslub (ko'p kompaniya, Telegram kirish, AES-256-GCM shifrlangan kalitlar), PWA
+- Logo: KattaBaza katakchalari + katta kvadratda trak (`web/public/brand/logo.svg`); PNG/ICO ikonkalar treyler'dagi Playwright bilan chiqariladi (scratchpad `icons.cjs` mantiqi: SVG → 192/512/maskable/180/48-ICO); manifest `/app.webmanifest`
 
 ## Arxitektura (qisqa)
 - `server/src/samsara/client.ts` — Samsara REST (US/EU/CA), 220 ms oraliq, 429 qayta urinish
@@ -51,7 +52,7 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - Port 3900 prod, 3901 dev (boshqa loyihalar: 3410, 3600, 3700, 3800, 4000, 4410, 8090)
 - Retrieval oylik kvotani sarflaydi; avto-rasm default o'chiq
 - Samsara `startMs` hujjatda son, amalda ISO matn; media input `MEDIA_INPUT_PRIMARY/SECONDARY`
-- Cloudflare js/css ni 4 soat keshlaydi — index.html `no-store`, assetlar xeshli; fastify-static `cacheControl: false`
+- Cloudflare js/css/svg/png ni 4 soat keshlaydi — index.html `no-store`, assetlar xeshli; fastify-static `cacheControl: false`. Ikonka/logo o'zgarsa - FAYL NOMINI almashtiring (brauzer favicon keshi juda qattiq)
 - Hub kartasiga sed `${ln}a` bilan yozishda `ln` bo'sh bo'lsa - qator HAR qatordan keyin qo'shiladi (2026-10-11 shunday buzilgan, tiklandi)
 
 ## Tarix
@@ -61,3 +62,4 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Telegram guruh: /link, platformadan ulash, har trakka alohida mavzu; Safety filtrlari
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Safety ichki kamera, hodisa turiga qarab kamera tanlash
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | KattaBaza logo, PWA, 3 til (uz/en/ru), sozlamalar bo'limlari + shaxsiy sozlamalar, Safety yorlig'i o'ng chetda; buzilgan hub kartasi tiklandi
+- 2026-10-11 | Claude | DESKTOP-QA8B43G | Yangi logo (KattaBaza + trak, C variant), ikonkalar /brand/ ga yangi nomlar bilan (eski ko'k favicon keshi); to'liq ekranda Safety paneli ham
