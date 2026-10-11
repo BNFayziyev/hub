@@ -17,6 +17,7 @@
 - Jonli rejim (`companies.live_seconds`): devor ko'rinib turgan trak ID larini `/api/wall?watch=..&focus=..` bilan yuboradi (20 s TTL), `liveTick` (har 3 s) yo'ldagi ko'rinib turganlarga `POST /cameras/media/retrieval` image yuboradi (ochilgani har 15 s), konveyer, kunlik kvota ulushi (qolgan*0.9 / oyning qolgan kunlari)
 - Xarita menyusi (`FleetPage.tsx`): chapda traklar (haydovchi, manzil, tezlik, filtr/saralash), markazda MapLibre (qorong'i/yorug'/sputnik, yo'nalish strelkalari), o'ngda Safety Inbox (`SafetyFeed.tsx`, ko'rinib turgan video aylanib o'ynaydi)
 - Haydovchilar: `/fleet/driver-vehicle-assignments?filterBy=vehicles` (2 daq); Safety: `/safety-events/stream` updatedAtTime kursori kv `safety_cursor:<id>` (1 daq), PRIMARY video diskka (`data/media/<id>/safety-<trak>/`), 14 kun
+- Telegram: guruh mavzusida `/link` (kompaniya admini) → `tg_targets` (chat_id, thread_id, toifalar: collision/harsh/distraction/speeding/other), inline tugmalar bilan toifa tanlanadi; `bot/notify.ts` har 20 s yuborilmaganlarni (`tg_sent`) video+izoh bilan yuboradi, video 15 daq kutiladi, ≤12 xabar/daq; Light/Moderate speeding yuborilmaydi; vaqt TOSH + CT (`TELEGRAM_TIMEZONES`)- Yo'l izi: `/api/vehicles/:id/track?hours=` → `/fleet/vehicles/stats/history?types=gps` (60 s kesh, ≤1500 nuqta), xaritada chiziq + boshlanish + 10+ daq to'xtashlar + safety hodisalar
 - `web/src/components/Wall.tsx` — devor (1–64 layout, sahifa, avto-aylantirish, F to'liq ekran, filtr), `Viewer.tsx` — katta ko'rinish + timelapse + "Hozirgi rasm"/"Video klip"
 
 ## Ishga tushirish
@@ -41,7 +42,8 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 ## Keyingi qadamlar
 - [x] Bot @samsara_kattabot, Cloudflare domeni, Task SamsaraWall, Write Media Retrieval
 - [ ] Kvota sarfini kuzatish
-- [ ] Taklif: Telegram ogohlantirish (og'ir safety), trak yo'li izi (24 soat), hodisani dismiss/coach qilish (Write Safety Events)
+- [ ] Guruhda Topics yoqib, har mavzuda /link qilish (foydalanuvchi)
+- [ ] Taklif: hodisani dismiss/coach qilish (Write Safety Events), kunlik hisobot
 - Fakt: periodicStill har 360 s (6 daq) keladi; Samsara Live Stream API da yo'q va litsenziyasiz 5 daq/oy/kamera
 
 ## Muhim qarorlar
@@ -59,3 +61,4 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Jonli rejim (ko'rinib turgan yo'ldagi traklardan har N s retrieval), latency CLI; prod qayta ishga tushirildi
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Jonli rejim prod'da yoqildi (30 s): konveyer so'rovlar, kamerasiz traklar chiqarildi, kvota 90% to'xtatish; o'lchov ~35 s/kadr, 72–87 s kechikish
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Xarita menyusi (ro'yxat + MapLibre + Safety Inbox videolari), haydovchilar, kunlik kvota taqsimoti, jonli 60 s/fokus 15 s
+- 2026-10-11 | Claude | DESKTOP-QA8B43G | Telegram guruh mavzulariga Safety videolari (/link + toifa tugmalari), xaritada trak yo'li izi (6–72 soat)
