@@ -14,7 +14,9 @@
 - `server/src/jobs/poller.ts` — har kompaniya sikli (default 30 s): `/fleet/vehicles` (10 daq), `/fleet/vehicles/stats?types=gps,engineStates`, `GET /cameras/media` (20 mashinadan, `inputs=dashcamRoadFacing`, `availableAfterTime` kursori kv `media_cursor:<id>`), retrieval holati, ixtiyoriy avto-rasm
 - Kadrlar `data/media/<kompaniya>/<mashina>/<ts>.jpg` ga yuklanadi (Samsara URL 8 soatda eskiradi), `/api/media/*` faqat o'z kompaniyasiga; 24 soatdan eskilari o'chadi (oxirgisi qoladi), kliplar 7 kun
 - `samsara/demo.ts` — demo kompaniya (28 soxta trak, SVG kadrlar)
-- Jonli rejim (`companies.live_seconds`): devor ko'rinib turgan trak ID larini `/api/wall?watch=..&focus=..` bilan yuboradi (20 s TTL), `liveTick` (har 3 s) yo'ldagi ko'rinib turganlarga `POST /cameras/media/retrieval` image yuboradi (ochilgani 3x tez), kutilayotganlarni har 3 s tekshiradi
+- Jonli rejim (`companies.live_seconds`): devor ko'rinib turgan trak ID larini `/api/wall?watch=..&focus=..` bilan yuboradi (20 s TTL), `liveTick` (har 3 s) yo'ldagi ko'rinib turganlarga `POST /cameras/media/retrieval` image yuboradi (ochilgani har 15 s), konveyer, kunlik kvota ulushi (qolgan*0.9 / oyning qolgan kunlari)
+- Xarita menyusi (`FleetPage.tsx`): chapda traklar (haydovchi, manzil, tezlik, filtr/saralash), markazda MapLibre (qorong'i/yorug'/sputnik, yo'nalish strelkalari), o'ngda Safety Inbox (`SafetyFeed.tsx`, ko'rinib turgan video aylanib o'ynaydi)
+- Haydovchilar: `/fleet/driver-vehicle-assignments?filterBy=vehicles` (2 daq); Safety: `/safety-events/stream` updatedAtTime kursori kv `safety_cursor:<id>` (1 daq), PRIMARY video diskka (`data/media/<id>/safety-<trak>/`), 14 kun
 - `web/src/components/Wall.tsx` — devor (1–64 layout, sahifa, avto-aylantirish, F to'liq ekran, filtr), `Viewer.tsx` — katta ko'rinish + timelapse + "Hozirgi rasm"/"Video klip"
 
 ## Ishga tushirish
@@ -28,7 +30,8 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 
 ## Hozirgi holat
 - Server + web tayyor, typecheck toza; demo kompaniya bilan brauzerda sinaldi (devor, 36 layout, viewer, rasm/video so'rovi, telefon)
-- Noto'g'ri kalit haqiqiy api.samsara.com dan 401 bilan to'g'ri rad etiladi
+- Kompaniya 1: jonli rejim 60 s (ochilgan trak 15 s), kunlik kvota ulushi bilan; o'lchov: kadr kechikishi 72–87 s
+- Safety: 3 kunda ~3100 hodisa, 93% tezlik (videosiz); videoli ~135 ta (har biri ~200 KB, MEDIA_INPUT_PRIMARY). `startMs` ISO matn keladi (hujjatda son). Haydovchi ko'pincha id "0" - trakning hozirgi haydovchisi qo'yiladi; atigi 7/79 trakda haydovchi biriktirilgan
 - `.env` to'ldirilgan (TELEGRAM_BOT_TOKEN bor, ADMIN_PASSWORD ham hali yoqiq), prod ishlayapti
 - Kompaniya 1: Write Media Retrieval qo'shildi, jonli rejim 30 s da YOQIQ va ishlayapti (o'lchandi: har trakda kadr ~33–36 s da yangilanadi, kechikish 72–87 s)
 - Kvota: oyiga 8040 s HD video (1 rasm = 0.1 s) → 30 s da 1 yo'ldagi trak soatiga 12 s; 90% da jonli rejim o'zi to'xtaydi
@@ -37,7 +40,8 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 
 ## Keyingi qadamlar
 - [x] Bot @samsara_kattabot, Cloudflare domeni, Task SamsaraWall, Write Media Retrieval
-- [ ] Kvota sarfini bir necha kun kuzatish; tez tugasa oraliqni 60 s ga ko'tarish
+- [ ] Kvota sarfini kuzatish
+- [ ] Taklif: Telegram ogohlantirish (og'ir safety), trak yo'li izi (24 soat), hodisani dismiss/coach qilish (Write Safety Events)
 - Fakt: periodicStill har 360 s (6 daq) keladi; Samsara Live Stream API da yo'q va litsenziyasiz 5 daq/oy/kamera
 
 ## Muhim qarorlar
@@ -54,3 +58,4 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Loyiha yaratildi: Samsara API (ko'p kompaniya), kamera devori iVMS uslubida, demo rejimi, Telegram/parol kirish
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Jonli rejim (ko'rinib turgan yo'ldagi traklardan har N s retrieval), latency CLI; prod qayta ishga tushirildi
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Jonli rejim prod'da yoqildi (30 s): konveyer so'rovlar, kamerasiz traklar chiqarildi, kvota 90% to'xtatish; o'lchov ~35 s/kadr, 72–87 s kechikish
+- 2026-10-11 | Claude | DESKTOP-QA8B43G | Xarita menyusi (ro'yxat + MapLibre + Safety Inbox videolari), haydovchilar, kunlik kvota taqsimoti, jonli 60 s/fokus 15 s
