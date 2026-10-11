@@ -1,7 +1,7 @@
 # Samsara Wall
 
 **Bir jumlada:** Samsara kamera devori — har kompaniya o'z Samsara API kaliti bilan, barcha traklarning yo'lga qaragan (tashqi) kameralari iVMS uslubidagi zich to'rda, pastida trak raqami.
-**Joylashuv:** `DESKTOP-QA8B43G`: `C:samsara` · Git: yo'q · Domen/URL: https://samsara.kattabaza.uz (Cloudflare tunnel → localhost:3900)
+**Joylashuv:** `DESKTOP-QA8B43G`: `C:\samsara` · Git: yo'q · Domen/URL: https://samsara.kattabaza.uz (Cloudflare tunnel → localhost:3900)
 **Holat:** prod (Task `SamsaraWall`, bot @samsara_kattabot), 1 kompaniya ulangan (44 trak)
 **Oxirgi yangilanish:** 2026-10-11
 
@@ -29,7 +29,8 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 ## Hozirgi holat
 - Server + web tayyor, typecheck toza; demo kompaniya bilan brauzerda sinaldi (devor, 36 layout, viewer, rasm/video so'rovi, telefon)
 - Noto'g'ri kalit haqiqiy api.samsara.com dan 401 bilan to'g'ri rad etiladi
-- `.env` yaratilgan (kalitlar generatsiya qilingan, TELEGRAM_ADMIN_IDS treyler'dan), TELEGRAM_BOT_TOKEN bo'sh → hozircha ADMIN_PASSWORD bilan kirish
+- `.env` to'ldirilgan (TELEGRAM_BOT_TOKEN bor, ADMIN_PASSWORD ham hali yoqiq), prod ishlayapti
+- Jonli rejim demo'da sinaldi (yo'ldagi traklar 10–13 s da yangilanadi); haqiqiy kompaniyada ruxsat yo'qligi sababli hali o'chiq
 
 ## Keyingi qadamlar
 - [x] Bot @samsara_kattabot, Cloudflare domeni, Task SamsaraWall
