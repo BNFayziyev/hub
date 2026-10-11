@@ -30,11 +30,14 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - Server + web tayyor, typecheck toza; demo kompaniya bilan brauzerda sinaldi (devor, 36 layout, viewer, rasm/video so'rovi, telefon)
 - Noto'g'ri kalit haqiqiy api.samsara.com dan 401 bilan to'g'ri rad etiladi
 - `.env` to'ldirilgan (TELEGRAM_BOT_TOKEN bor, ADMIN_PASSWORD ham hali yoqiq), prod ishlayapti
-- Jonli rejim demo'da sinaldi (yo'ldagi traklar 10–13 s da yangilanadi); haqiqiy kompaniyada ruxsat yo'qligi sababli hali o'chiq
+- Kompaniya 1: Write Media Retrieval qo'shildi, jonli rejim 30 s da YOQIQ va ishlayapti (o'lchandi: har trakda kadr ~33–36 s da yangilanadi, kechikish 72–87 s)
+- Kvota: oyiga 8040 s HD video (1 rasm = 0.1 s) → 30 s da 1 yo'ldagi trak soatiga 12 s; 90% da jonli rejim o'zi to'xtaydi
+- Kamerasiz traklar (`cameraSerial` bo'sh, 79 dan 14 tasi) devorda ko'rinmaydi va so'ralmaydi; 400 "Camera was not recording" → shu trak 10 daq tinch qo'yiladi
+- Jonli so'rovlar konveyer: trakda bir vaqtda ≤ ceil(75 s / oraliq) ta so'rov kutilishi mumkin
 
 ## Keyingi qadamlar
-- [x] Bot @samsara_kattabot, Cloudflare domeni, Task SamsaraWall
-- [ ] Kompaniya 1 kalitiga **Write Media Retrieval** ruxsati qo'shilsin (hozir POST 401: "Token requires Media Retrieval write permissions"), keyin Sozlamalar → Jonli rejim yoqilsin va `npm run latency -- 1 <vehicleId>` bilan kechikish o'lchansin
+- [x] Bot @samsara_kattabot, Cloudflare domeni, Task SamsaraWall, Write Media Retrieval
+- [ ] Kvota sarfini bir necha kun kuzatish; tez tugasa oraliqni 60 s ga ko'tarish
 - Fakt: periodicStill har 360 s (6 daq) keladi; Samsara Live Stream API da yo'q va litsenziyasiz 5 daq/oy/kamera
 
 ## Muhim qarorlar
@@ -50,3 +53,4 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 ## Tarix
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Loyiha yaratildi: Samsara API (ko'p kompaniya), kamera devori iVMS uslubida, demo rejimi, Telegram/parol kirish
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Jonli rejim (ko'rinib turgan yo'ldagi traklardan har N s retrieval), latency CLI; prod qayta ishga tushirildi
+- 2026-10-11 | Claude | DESKTOP-QA8B43G | Jonli rejim prod'da yoqildi (30 s): konveyer so'rovlar, kamerasiz traklar chiqarildi, kvota 90% to'xtatish; o'lchov ~35 s/kadr, 72–87 s kechikish
