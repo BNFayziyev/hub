@@ -1,6 +1,6 @@
 # SYNAPSE — Instagram @synapseit.uz
 
-**Bir jumlada:** SYNAPSE MChJ ning Instagram sahifasi — Telegram bot (@Instagram_kattabot) har kuni IT Reel taklif qiladi, egasi tasdiqlagach API orqali joylanadi; karusel postlar CLI orqali.
+**Bir jumlada:** SYNAPSE MChJ Instagram sahifasini Telegram bot (@Instagram_kattabot) orqali to'liq boshqarish: kunlik Reels, karusel postlar, izoh/Direct javoblari, statistika — hammasi egasi tasdig'i bilan.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\synapse\instagram` · Git: yo'q · Domen/URL: instagram.com/synapseit.uz, t.me/Instagram_kattabot
 **Holat:** ishlayapti (bot fon rejimida, 1-post chiqqan, Reels tasdiq kutmoqda)
 **Oxirgi yangilanish:** 2026-10-11
@@ -17,6 +17,9 @@
 - `lib/writer.mjs` — Claude promptlari (8 rukn aylanadi), zod sxema, ekrandagi matnda oʻ/gʻ → U+02BB normalizatsiya, caption + aloqa + xeshteg
 - `lib/reel.mjs` — TTS → sahna vaqtlari → Remotion bundle/render (har render bundle) → reel.mp4 + cover.jpg
 - `reels/` — Reel.tsx (hook/item/outro, tugma "keycap"lari, progress chizig'i), Backdrop.tsx (neyron tarmoq), theme.ts
+- `lib/manage.mjs` — izohlar (o'qish/javob/yashirish/o'chirish), Direct (o'qish/javob, 24 soat oynasi), statistika (akkaunt + post insights), story (`publishStory`)
+- `lib/carousel.mjs` — karusel JSON → HTML (posts/_shared uslubi) → JPEG, oxiriga aloqa slaydi
+- `lib/tts-aisha.mjs` — VoiceLab: butun matn 1 so'rovda, sukut bo'yicha sahnalarga kesish; `lib/pronounce.mjs` — talaffuz lug'ati
 - `lib/ig.mjs` — API: publishReel (`video_url`), publishImages, recentMedia, refreshToken; fayllar `dist/ig/<tasodifiy>/` orqali vaqtincha ochiq, keyin o'chiriladi
 - `ig.mjs` — CLI (check/render/publish/reel/media/refresh); `posts/` — karusel slaydlar; `tools/` tts.py, music.py
 - `data/` — reels/<sana-id>/ (state.json, script.json, reel.mp4), history.json, bot-state.json, bot.log, refresh.log
@@ -30,6 +33,12 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 - 2026-10-11: bot ishlayapti, admin = foydalanuvchi (TG_ADMIN_IDS); 1-kunlik taklif «Clipboard History (Win+V)» yuborilgan (ekranda talaffuz yozuvi chiqib qolgan — keyin tuzatildi, bu variantni ✏️ bilan yangilash mumkin)
 - Reel joylash sinovi (joylamasdan konteyner) — FINISHED, 29–54 s
 - `posts/01-tanishuv` karusel chiqqan: https://www.instagram.com/p/DeU9bgZGu76/
+
+## Bot imkoniyatlari (2026-10-11)
+- Reels kunlik + `/yangi`, karusel `/post`, ✏️ tahrir (reply ham), 🔁, 🕖 rejalash, 📲 story (Reel joylangach)
+- Izoh/Direct har 2 daq: ✍️ Claude 3 variant → tugma bilan yuborish; ✏️ o'z matn → tasdiq; 🙈 yashirish; 🗑 o'chirish (tasdiq)
+- `/stat`, dushanba 10:05 haftalik hisobot; birinchi ishga tushishda eski izoh/DM "ko'rilgan" deb belgilanadi
+- API qila olmaydi: post o'chirish/caption tahriri, bio/highlight, pin, musiqa
 
 ## Keyingi qadamlar
 - [ ] Birinchi Reel'ni haqiqatan joylash (foydalanuvchi ✅) va natijani tekshirish
@@ -63,3 +72,4 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | 01-tanishuv API orqali joylandi (karusel, 5 slayd), foydalanuvchi tasdigi bilan
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Reels tizimi: @Instagram_kattabot (tasdiq/tahrir/rejalash), Remotion shablon, o'zbekcha TTS, sintez musiqa, Claude CLI yozuvchi; vazifa SynapseIG-Bot
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Diktor VoiceLab Lola ga o'tkazildi (Edge zaxira), talaffuz lug'ati va pauza tuzatish
+- 2026-10-11 | Claude | DESKTOP-QA8B43G | To'liq boshqaruv: izoh/Direct javoblari, /post karusel, /stat + haftalik hisobot, story; VoiceLab bitta so'rov + sukut bo'yicha kesish; layfxak
