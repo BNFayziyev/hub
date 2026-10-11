@@ -64,3 +64,4 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Xarita menyusi (ro'yxat + MapLibre + Safety Inbox videolari), haydovchilar, kunlik kvota taqsimoti, jonli 60 s/fokus 15 s
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Telegram guruh mavzulariga Safety videolari (/link + toifa tugmalari), xaritada trak yo'li izi (6–72 soat)
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Telegram: platformadan ulash, har trakka alohida mavzu; Safety filtrlari kengaytirildi, Kameralar sahifasida Safety paneli
+- 2026-10-11 | Claude | DESKTOP-QA8B43G | Guruh ulanishi per_truck rejimiga o'tkazildi (bot admin edi, my_chat_member o'tkazib yuborilgan); /api/telegram bot huquqlarini Telegram'dan qayta tekshiradi
