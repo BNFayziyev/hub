@@ -3,7 +3,7 @@
 **Bir jumlada:** SYNAPSE MChJ ning Instagram sahifasi — profil, post tayyorlash (HTML → JPEG) va Instagram API orqali joylash.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\synapse\instagram` · Git: yo'q · Domen/URL: instagram.com/synapseit.uz
 **Holat:** ishlayapti (API orqali 1-post chiqdi)
-**Oxirgi yangilanish:** 2026-10-10
+**Oxirgi yangilanish:** 2026-10-11
 
 ## Stack
 - Node 24 (`ig.mjs`, bog'liqlik faqat `playwright-core` → o'rnatilgan Chrome), lucide-static ikonkalar (`C:\synapse\node_modules`)
@@ -29,7 +29,7 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 - Akkauntda 2026-10-09 dagi 1 ta Reel bor (foydalanuvchi o'zi joylagan)
 
 ## Keyingi qadamlar
-- [ ] 01-tanishuv ni profil tepasiga pin qilish (qo'lda — API qila olmaydi)
+- [x] 01-tanishuv ni profil tepasiga pin qilish (qo'lda — API qila olmaydi)
 - [ ] Profil: ism/bio (UZ tanlandi), avatar-b, havolalar — foydalanuvchi qo'lda
 - [ ] 02 xizmatlar, 03 loyihalar karusellari; promo Reel 9:16
 - [ ] 2026-10-12 dan keyin `data/refresh.log` ni tekshirish (vazifa birinchi marta ishlaganmi)
@@ -54,3 +54,4 @@ Kerakli `.env` kalitlari (faqat nomlari): `IG_ACCESS_TOKEN`, `IG_USER_ID`, `PUBL
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | @synapse_bo1 olib tashlandi → Telegram @beekhasanov; 4-slaydda AI yordamchi o'rniga Xavfsizlik tekshiruvi
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | 4-slayd: Time (FaceID davomat), Samsara Bot, "…va yana"; token yangilash vazifasi SynapseIG-TokenRefresh
 - 2026-10-10 | Claude | DESKTOP-QA8B43G | 01-tanishuv API orqali joylandi (karusel, 5 slayd), foydalanuvchi tasdigi bilan
+- 2026-10-11 | Men (web) | hub.kattabaza.uz | Vazifa bajarildi: 01-tanishuv ni profil tepasiga pin qilish (qo'lda — API qila olmaydi)
