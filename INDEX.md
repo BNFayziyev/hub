@@ -21,7 +21,7 @@ Avval shu jadvalni o'qing, keyin faqat kerakli kartani oching. Qoidalar: [AGENTS
 | [synapse](projects/synapse.md) | synapseit.uz korporativ 3D sayt | `C:\synapse` (DESKTOP-QA8B43G) | prod | 2026-10-10 |
 | [synapse_promo](projects/synapse_promo.md) | SYNAPSE promo video (RU, Remotion + sintez saundtrek) | `C:\synapse\video` (DESKTOP-QA8B43G) | qoralama tayyor | 2026-10-10 |
 | [synapse_instagram](projects/synapse_instagram.md) | Instagram @synapseit.uz — Reels bot (@Instagram_kattabot), postlar, API joylash | `C:\synapse\instagram` (DESKTOP-QA8B43G) | ishlayapti (1-post chiqdi) | 2026-10-11 |
-| [tejamkor](projects/tejamkor.md) | Claude mod: kredit tejash (limit+sanoq, avto model, hub xotira) | `C:\hub	ools	ejamkor` (DESKTOP-QA8B43G) | ishlab chiqilmoqda | 2026-10-11 |
+| [tejamkor](projects/tejamkor.md) | Claude mod: kredit tejash (limit+sanoq, avto model, hub xotira) | `C:\hub\tools\tejamkor` (DESKTOP-QA8B43G) | ishlab chiqilmoqda | 2026-10-11 |
 | [treyler](projects/treyler.md) | Treyler Nazorat (GPS, turib qolganlar) | `C:\treyler` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-08 |
 | [usbot](projects/usbot.md) | 3x-ui monitoring Telegram boti | `C:\usbot` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-08 |
 | [x-ui](projects/x-ui.md) | 3x-ui VPN panel (tayyor dastur) | `C:\x-ui` (DESKTOP-QA8B43G) | ishlayapti | 2026-10-08 |
