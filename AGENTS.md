@@ -1,37 +1,47 @@
-# HUB — barcha loyihalar xotirasi (har qanday AI uchun qoidalar)
+# HUB — barcha AI va kompyuterlar uchun umumiy tartib
 
-Bu papka egasining BARCHA loyihalari haqidagi yagona manba. Uni Claude, ChatGPT, Gemini
-va 4 ta kompyuter ishlatadi. Maqsad: yangi chat yoki boshqa AI loyihani qaytadan
-o'qib chiqmasdan, shu yerdagi ma'lumot bilan xatosiz va kam token sarflab davom ettirsin.
+Hub loyiha xotirasi; loyiha kodi alohida papka/repositoriyda. Til: o'zbekcha lotin.
+Amaliy buyruqlar: COORDINATION.md. Python 3.10+ va Git kerak.
 
-## Ish boshlashdan oldin (O'QISH)
-1. `INDEX.md` ni o'qing — qaysi loyiha qayerda, holati qanday.
-2. Faqat kerakli loyiha kartasini o'qing: `projects/<nom>.md`.
-3. Kartada yozilgan narsani qaytadan tekshirib, butun loyihani skanerlamang.
-   Faqat kartada yo'q yoki "?" bilan belgilangan narsa uchun kerakli fayllarni oching.
-4. Karta koddan farq qilsa — kod to'g'ri, kartani tuzating.
+## Ish boshlash
+1. Kompyuter nomi, haqiqiy loyiha yo'li va Git remote'ni tekshiring. Boshqa kompyuterdagi
+   papka ulangan deb hisoblamang. GitHub nusxasi yuborilmagan lokal ishni ko'rsatmaydi.
+2. Har AI sessiyasi alohida Hub clone'da ishlasin. HubWeb ishlatadigan C:\hub ni AI
+   tahrir va Git amallari uchun ishlatmang. Bir clone'da ikki yozuvchi bo'lmasin.
+3. `python tools/hub.py sync`, INDEX.md, keyin kerakli projects/<nom>.md ni o'qing.
+   Faqat vazifaga tegishli kodni tekshiring. Karta koddan farq qilsa, kod faktini yozing.
+4. `python tools/hub.py status` bilan band vazifalarni ko'ring. Kod/kartani o'zgartirishdan
+   oldin claim bajaring; muvaffaqiyatli push va vazifa IDsi olinmaguncha boshlamang.
+   Owner: AI/COMPUTER/session — har sessiyaga alohida nom.
+5. Bir loyiha uchun bitta faol yozuvchi. Blocked ham band. Internet bo'lmasa faqat o'qish.
+   Umumiy papkadagi loyihalar bir resurs: synapse + synapse_promo + synapse_instagram;
+   hub + tejamkor + hubweb. Yangi umumiy papka bo'lsa tools/hub.py dagi GROUPS ni yangilang.
+6. Kod uchun alohida branch/worktree yoki clone ishlating. Umumiy ish papkasida davom
+   etish zarur bo'lsa, avval oldingi AI topshirig'i va lokal o'zgarishlar egasini aniqlang.
 
-## Ish tugagach (YOZISH) — majburiy
-Loyihada biror narsa o'zgartirsangiz yoki yangi loyiha ochsangiz:
-1. `projects/<nom>.md` ni yangilang: "Hozirgi holat", "Keyingi qadamlar", kerak bo'lsa
-   "Arxitektura"/"Muhim qarorlar"/"Ehtiyot bo'ling". Eskirgan gaplarni o'chiring (karta qisqa qolsin).
-2. Kartaning oxiridagi "Tarix" ga BITTA qator qo'shing:
-   `- YYYY-MM-DD | <AI nomi> | <kompyuter> | nima qilindi`
-3. Yangi loyiha bo'lsa: `templates/project.md` dan nusxa oling va `INDEX.md` ga qator qo'shing.
-4. `INDEX.md` dagi holat/sana ustunini yangilang.
-5. Git mavjud bo'lsa: `git pull` (boshida) va `git add -A && git commit -m "<loyiha>: ..." && git push` (oxirida).
+## Ish tugashi va topshirish
+1. Tegishli testlarni bajaring: o'tdi / yiqildi / bajarilmadi + sababni yozing.
+2. Kartadagi Hozirgi holat, Keyingi qadamlar va kerakli qarorlarni yangilang.
+   Tarixga bitta qator: YYYY-MM-DD | AI | COMPUTER | vazifa IDsi, nima qilindi.
+3. INDEX holati/sanasini karta bilan moslang. Yangi karta uchun templates/project.md.
+   Noaniq holatni taxmin bilan almashtirmang; ? va nimani tekshirish kerakligini yozing.
+4. `python tools/hub.py validate`, keyin git diff. Faqat o'zingiz o'zgartirgan fayllarni
+   `git add -- <aniq fayllar>` bilan stage qiling. `git add -A` ishlatmang.
+   `git diff --cached` ni tekshirib commit va oddiy push qiling.
+5. Push rad etilsa: toza ish nusxasida fetch + rebase, konfliktlarni mazmunan tekshirish,
+   validate va qayta push. Avtomatik ours/theirs, force-push, reset --hard va autostash yo'q.
+   Boshqa AI ishini o'chirmang yoki uning nomidan commit qilmang.
+6. Kod commit/branch/PR, test, qayerga yetkazilgani va qolgan qadamlarni finish ga yozing.
+   GitHubga push boshqa kompyuterga o'rnatildi degani emas. Prod holatini tekshirgach yozing.
+7. Ish to'xtasa block, bekor qilinsa cancel: sabab, saqlangan ish va keyingi qadam majburiy.
+   Egasi qaytmasa, foydalanuvchi tasdiqlagan topshirish asosida eski owner/ID bilan cancel,
+   keyin yangi claim. Qulf vaqt o'tishi bilan o'z-o'zidan ochilmaydi.
 
-## Yozish qoidalari
-- Karta 150 qatordan oshmasin. Faktlar, buyruqlar, yo'llar — suv yo'q.
-- Til: o'zbekcha (lotin). Kod, buyruq, fayl nomlari asl holicha.
-- HECH QACHON parol, token, API kalit, `.env` qiymatlarini yozmang. Faqat kalit NOMI
-  (masalan `BOT_TOKEN — .env da`).
-- Noaniq narsani "?" bilan belgilang, o'ylab topmang.
-- Loyiha qaysi kompyuterda va qaysi yo'lda turganini yozing (kompyuterlar ro'yxati — `COMPUTERS.md`).
-
-## Fayllar
-- `INDEX.md` — loyihalar jadvali (birinchi o'qiladigan fayl)
-- `projects/*.md` — har bir loyiha kartasi
-- `COMPUTERS.md` — 4 ta kompyuter va ulardagi loyihalar
-- `templates/project.md` — yangi karta shabloni
-- `prompts/start.md` — ChatGPT/Gemini veb-chatiga yopishtiriladigan matn
+## Ma'lumot sifati
+- Karta 150 qatordan oshmasin. Faktlar, yo'llar, buyruqlar, tekshiruv natijalari.
+- Parol, token, API kalit va .env qiymatlarini yozmang. Faqat kalit nomi.
+- COMPUTERS.md: kompyuter, yo'l, ulanish. Bilinmagan narsani ? bilan belgilang.
+- hub-coordination branchidagi state.json vazifalar uchun yagona manba; uni qo'lda
+  tahrirlamang, main'ga merge qilmang, ikkinchi vazifalar ro'yxatini yuritmang.
+- Barcha AIlar protokolga o'tmaguncha himoya to'liq ishlamaydi. Eski sessiyalarga yangi
+  AGENTS.md ni qayta o'qiting. HubWeb integratsiyasi alohida ish.

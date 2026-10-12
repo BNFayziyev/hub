@@ -1,34 +1,40 @@
-# Hub — qanday ishlatiladi (siz uchun)
+# Hub — loyihalar va AIlar hamkorligi
 
-Hub — barcha loyihalaringizning "xotirasi". Har bir AI ishni shu yerdan o'qib boshlaydi
-va tugatgach shu yerga yozadi. Shuning uchun yangi chat loyihani qayta o'qimaydi → kam kredit.
+Hub kartalarda loyiha holatini, alohida coordination branchida esa kim nima qilayotganini saqlaydi.
+Har AI avval AGENTS.md va COORDINATION.md ni o'qiydi. Python 3.10+ va Git kerak.
 
-## Claude Code (4 ta kompyuterda)
-Har bir kompyuterda `C:\Users\<siz>\.claude\CLAUDE.md` da hub qoidasi bor (o'rnatish — pastda).
-Shundan keyin istalgan loyiha papkasida Claude avtomatik: hubdan o'qiydi → ishlaydi → kartani yangilaydi.
-Esdan chiqsa ayting: **"hubni yangila"**.
+## Ish tartibi
+1. Har AI sessiyasi uchun alohida Hub clone.
+2. Sync → kerakli karta → status → claim.
+3. Alohida kod ish nusxasida vazifani bajarish va tekshirish.
+4. Karta va INDEX yangilanishi → validate → aniq fayllarni commit/push.
+5. Finish: kod commit, test va boshqa kompyuterga yetkazish holati.
 
-## ChatGPT / Gemini
-- **Codex CLI / Gemini CLI** (kompyuterda): ular `AGENTS.md` / `GEMINI.md` ni o'zi o'qiydi —
-  hub papkasida ishga tushiring yoki promptda "C:\hub\AGENTS.md ga amal qil" deng.
-- **Veb-chat** (chatgpt.com, gemini.google.com): [prompts/start.md](prompts/start.md) dagi matn + kerakli
-  karta faylini yuklang. Oxirida bergan "KARTA YANGILANISHI" ni kartaga qo'shing
-  (yoki Claude'ga "shu bilan hubni yangila" deb bering).
-- ChatGPT Projects / Gemini Gems ichiga `AGENTS.md` va `INDEX.md` ni doimiy fayl qilib qo'yish ham mumkin.
+Buyruqlar: [COORDINATION.md](COORDINATION.md). Vazifalar: `python tools/hub.py status`.
+Hub GitHub manzili: https://github.com/BNFayziyev/hub
 
-## 4 ta kompyuter o'rtasida sinxronlash (GitHub private repo)
-Birinchi kompyuterda (bir marta):
+## Boshqa loyiha papkasidan foydalanish
+Har sessiyada AIga ayting: "Hub nusxam <to'liq yo'l>. Undagi AGENTS.md ga amal qil."
+Loyiha papkasiga uch AI uchun havola o'rnatish:
+```powershell
+ .\setup\install-ai.ps1 -ProjectPath C:\loyiha -HubPath C:\hub-agents\session1
 ```
-cd C:\hub
-git remote add origin https://github.com/<user>/hub.git
-git push -u origin main
-```
-Boshqa kompyuterlarda:
-```
-git clone https://github.com/<user>/hub.git C:\hub
-```
-So'ng `setup/install-claude.ps1` ni ishga tushiring. AI har ish boshida `git pull`, oxirida `git push` qiladi.
+Skript AGENTS.md, CLAUDE.md, GEMINI.md ga boshqariladigan bo'lim qo'shadi, mavjud matnni
+saqlaydi va o'zgaradigan faylning zaxirasini oladi. Bitta loyiha papkasini sessiyalar o'rtasida
+bo'lishmang. O'rnatishdan keyin AIga yangi qoidalarni o'qiting.
+Eski global Claude ulanishi bor kompyuterlarda eski install-claude.ps1 ni takror ishlatmang;
+uning global qoidalarini yangi tartibga moslash kerak. AGENTS.md dagi protokol ustun.
 
-## Muhim
-- Hubga parol/token/`.env` yozilmaydi — repo private bo'lsa ham.
-- `COMPUTERS.md` dagi qolgan 3 ta kompyuter qatorini to'ldiring.
+## Kompyuterlarni ulash
+COMPUTERS.md dagi yo'llar va ulanish holatini haqiqiy tekshiruv asosida to'ldiring.
+GitHubga kirish boshqa PCga masofaviy kirish bermaydi. Kod repositoriylari alohida ulanadi.
+HubWeb ishlatadigan C:\hub faqat HubWeb nusxasi bo'lsin. Faol AI vazifasi kartasini webdan
+integratsiya tugaguncha tahrirlamang. Qolgan ishlar: projects/hub.md.
+
+## Veb-chat
+Git vositasi bo'lmagan chat faqat taklif tayyorlaydi. prompts/start.md dan foydalaning.
+Yozishni lokal AI claim olgach amalga oshiradi.
+
+## Tekshiruv
+`python tools/hub.py validate` va `python -m unittest discover -s tools -p test_hub.py -v`.
+Hech qachon parol, token yoki .env qiymatlarini Hubga yozmang.

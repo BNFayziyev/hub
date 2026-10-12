@@ -3,7 +3,7 @@
 **Bir jumlada:** 64 s, 1920×1080, 60 fps motion-promo (vizitka.kattabaza.uz uchun), gapsiz — faqat musiqa va effektlar; hammasi kod bilan.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\vizitka_promo` · Git: yo'q · Domen/URL: -
 **Holat:** birinchi versiya tayyor
-**Oxirgi yangilanish:** 2026-10-09
+**Oxirgi yangilanish:** 2026-10-12
 
 ## Stack
 - Remotion 4 (React, TS), Python sintez (`C:\kattabaza_promo\.venv` dan foydalaniladi), puppeteer-core (ilova suratlari)
@@ -25,3 +25,7 @@ README.md da: studio, soundtrack.py, render.
 
 ## Tarix
 - 2026-10-09 | Claude | DESKTOP-QA8B43G | Loyiha yaratildi: 11 sahna, sintez musiqa/SFX, haqiqiy ilova suratlari
+- 2026-10-12 | Codex | WIN-6V7C5DQJNII | Hub tekshiruvida yetishmagan Keyingi qadamlar bo'limi qo'shildi; loyiha kodi tekshirilmadi.
+
+## Keyingi qadamlar
+- [ ] ? Egasi bilan keyingi video o'zgarishini aniqlash; lokal kod/chiqishni tekshirish.

@@ -14,7 +14,7 @@ Avval shu jadvalni o'qing, keyin faqat kerakli kartani oching. Qoidalar: [AGENTS
 | [link](projects/link.md) | Vizitka — raqamli vizitka platformasi | `C:\link` (DESKTOP-QA8B43G) | ishlab chiqilmoqda? | 2026-10-09 |
 | [monitoring](projects/monitoring.md) | Mijoz qurilmalari monitoringi (MikroTik) | `C:\monitoring` (DESKTOP-QA8B43G) | boshlang'ich | 2026-10-08 |
 | [bronbar](projects/bronbar.md) | BronBar — sartaroshxona bron platformasi | `C:\s` (DESKTOP-QA8B43G) | prod (MVP), bron.kattabaza.uz | 2026-10-09 |
-| [vizitka_promo](projects/vizitka_promo.md) | Vizitka promo video (Remotion) | `C:\vizitka_promo` (DESKTOP-QA8B43G) | v1 tayyor | 2026-10-09 |
+| [vizitka_promo](projects/vizitka_promo.md) | Vizitka promo video (Remotion) | `C:\vizitka_promo` (DESKTOP-QA8B43G) | v1 tayyor | 2026-10-12 |
 | [nega_shorts](projects/nega_shorts.md) | "Nega?" ilmiy shorts (UZ, 9:16, Remotion) — 1-mavzu: tishlar | `C:\nega` (DESKTOP-QA8B43G) | to'liq video qoralama | 2026-10-11 |
 | [nega_yer](projects/nega_yer.md) | "Nega?" 2-mavzu: Agar Yer 2 barobar katta bo'lsa (UZ, 9:16, 3D) | `C:\yer` (DESKTOP-QA8B43G) | to'liq video qoralama | 2026-10-11 |
 | [opus_video](projects/opus_video.md) | Claude Opus 5.5 motion video (UZ, Firdavs Urinov ovozi, #f76400) | `C:\motion` (DESKTOP-QA8B43G) | to'liq video qoralama | 2026-10-11 |
@@ -26,3 +26,4 @@ Avval shu jadvalni o'qing, keyin faqat kerakli kartani oching. Qoidalar: [AGENTS
 | [treyler](projects/treyler.md) | Treyler Nazorat (GPS, turib qolganlar) | `C:\treyler` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-08 |
 | [usbot](projects/usbot.md) | 3x-ui monitoring Telegram boti | `C:\usbot` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-08 |
 | [x-ui](projects/x-ui.md) | 3x-ui VPN panel (tayyor dastur) | `C:\x-ui` (DESKTOP-QA8B43G) | ishlayapti | 2026-10-08 |
+| [hub](projects/hub.md) | AIlar va kompyuterlar hamkorligi, xotira va vazifalar | `C:\hub` (HubWeb), AIlar alohida clone | protokol tayyor; joriy etish kerak | 2026-10-12 |

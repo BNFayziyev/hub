@@ -3,3 +3,9 @@
 *.pem
 
 .claude/
+
+__pycache__/
+*.pyc
+.env.*
+!.env.example
+*.hub-backup-*

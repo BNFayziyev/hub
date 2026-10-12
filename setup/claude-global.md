@@ -1,11 +1,7 @@
-# Loyihalar hubi (C:\hub) — har bir sessiyada majburiy
+# Loyihalar hubi (C:\hub)
 
-Barcha loyihalar haqidagi ma'lumot `C:\hub` da. Qoidalar: `C:\hub\AGENTS.md`.
-
-- Loyiha ustida ish boshlashdan oldin: `C:\hub` da `git pull` (agar remote bo'lsa), `C:\hub\INDEX.md` va
-  shu loyihaning `C:\hub\projects\<nom>.md` kartasini o'qing. Kartadagi ma'lumotga tayaning, butun
-  loyihani qayta skanerlamang — faqat kerakli fayllarni oching.
-- Loyihada biror narsa o'zgartirgach yoki yangi loyiha ochgach: kartani va `INDEX.md` ni yangilang,
-  "Tarix" ga bitta qator qo'shing (`YYYY-MM-DD | Claude | <COMPUTERNAME> | nima qilindi`), keyin
-  `C:\hub` da commit + push (remote bo'lsa).
-- Hubga hech qachon parol, token, `.env` qiymatlarini yozmang.
+C:\hub\AGENTS.md ni o'qing. HubWeb shu nusxadan foydalanishi mumkin: unga yozmang.
+Har sessiyaga alohida Hub clone yarating; unda sync → karta → status → claim tartibi.
+Ish tugagach validate, faqat aniq fayllarni commit/push, keyin finish.
+To'liq buyruqlar COORDINATION.md da. Eski git add -A yoki avtomatik pull tartibini ishlatmang.
+Hubga maxfiy qiymatlarni yozmang.
