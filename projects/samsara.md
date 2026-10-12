@@ -69,3 +69,4 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Yangi logo (KattaBaza + trak, C variant), ikonkalar /brand/ ga yangi nomlar bilan (eski ko'k favicon keshi); to'liq ekranda Safety paneli ham
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Glass/blur uslub (kattabaza.uz kabi), kunduzgi rejim + avtomatik; yashirin tabda birinchi yuklash tuzatildi
 - 2026-10-12 | Claude | DESKTOP-QA8B43G | Kompaniya login/parol (scrypt), urinishlar cheklovi (IP+login, bazada), kirish formasi login+parol; eski /api/auth/password olib tashlandi
+- 2026-10-12 | Claude | DESKTOP-QA8B43G | Telegram bot xabarlari (caption, hodisa turlari, /link tugmalari, buyruqlar) ingliz tiliga o'tkazildi; /holat → /status (eski nom ham ishlaydi); vaqt TOSH → UZT
