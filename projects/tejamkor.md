@@ -39,8 +39,9 @@ Doimiy yoqish: foydalanuvchi env `CLAUDE_CODE_PLUGIN_DIRS=C:\hub\tools\tejamkor`
 - Limitlar faqat obunada (Pro/Max) chiqadi; API kalitda bo'sh.
 
 ## Keyingi qadamlar
-- [ ] Jonli sessiyada sinash: band ko'rinishi, model haqiqatan almashishi.
+- [ ] Jonli sessiyada sinash (env o'rnatildi, ilova qayta ochilishi kerak): band ko'rinishi, model haqiqatan almashishi.
 - [ ] Kalit so'zlar ro'yxatini real promptlar bo'yicha sozlash.
 
 ## Tarix
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | mod yaratildi (band+sanoq, avto model, hub karta inject, /tejam), validate+5 test o'tdi
+- 2026-10-11 | Claude | DESKTOP-QA8B43G | README qo'llanma; CLAUDE_CODE_PLUGIN_DIRS user env o'rnatildi
