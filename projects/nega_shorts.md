@@ -2,7 +2,7 @@
 
 **Bir jumlada:** "Nega bunday, unday emas?" / "Agar ... bo'lganida-chi?" formatidagi ilmiy-ommabop vertikal (1080×1920, 60 fps) videolar, o'zbekcha diktor (Firdavs Urinov, AishaAI), hammasi kod bilan (Remotion).
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\nega` · Git: yo'q · Domen/URL: -
-**Holat:** 1-mavzu "Tish" — to'liq video v2 (~103 s) render qilindi `out/tish-full-v2.mp4`; foydalanuvchi ko'rib chiqmoqda
+**Holat:** 1-mavzu "Tish" — to'liq video v3 (~106 s) render qilindi `out/tish-full-v3.mp4`
 **Oxirgi yangilanish:** 2026-10-11
 
 ## Stack
@@ -29,6 +29,7 @@ node tools/stills.mjs 1 4.6 9.3   # kadr tekshirish
 `.env` kalitlari (faqat nomlari): `AISHA_API_KEY`, `VOICELAB_VOICE`, `VOICELAB_MODEL`
 
 ## Muhim qarorlar (foydalanuvchi)
+- TTS: lotin 'i' ba'zi so'zlarda xira ([ɨ]) o'qiladi (sinsa, kalit, fil, evolyutsiya, 'sakkiz' -> 'saskiz'); tts.py dagi PRON lug'atida kirill yozuvi bilan tuzatiladi — yangi noto'g'ri so'zlarni shu yerga qo'shing. Ovozni men eshita olmayman, foydalanuvchi baholaydi. 'Obuna bo'ling' kerak emas.
 - Asosiy talab: video boshidan oxirigacha ushlab tursin (retention)
 - Hozircha kanal nomi/handle yo'q
 - Ovoz: Firdavs Urinov — tasdiqlandi
@@ -42,6 +43,7 @@ node tools/stills.mjs 1 4.6 9.3   # kadr tekshirish
 - [ ] To'liq video bo'yicha izohlar
 
 ## Tarix
+- 2026-10-11 | Claude | DESKTOP-QA8B43G | v3: nutq paragraf-paragraf (bitta so'rovda 2–4 jumla, tabiiy pauza, MAXGAP 0.55), noto'g'ri 'i' so'zlari TTS ga kirillda (tts.py PRON), 'Obuna bo'ling' olib tashlandi
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | v2: barcha satrlar bitta so'rovda (tabiiy nutq), akula og'zi qayta (hajmli arra tishlar, teri/milk), yakun — azot (78/100 molekula)
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | To'liq video: nutq tabiiylashtirildi (tempo 1.07, yengil VO zanjiri), 7 ta yangi 3D sahna, avtomatik vaqt jadvali
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Hook 3D ga o'tkazildi (protsedural tishlar, rentgen shader)
