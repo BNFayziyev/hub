@@ -6,8 +6,12 @@
       "project": "hub",
       "owner": "Codex/WIN-6V7C5DQJNII/hub-20261012",
       "summary": "Hub hamkorlik protokolini joriy qilish va tekshirish",
-      "status": "active",
-      "started": "2026-10-12T08:35:31+00:00"
+      "status": "done",
+      "started": "2026-10-12T08:35:31+00:00",
+      "updated": "2026-10-12T08:38:24+00:00",
+      "result": "Hub main: 688a663 GitHubga yuborildi; DESKTOP-QA8B43G lokal nusxasiga kirish yo'q, rollout tasdiqlanmagan",
+      "tests": "7 unittest o'tdi; validator errors=0; installer matn saqlash va idempotentlik o'tdi; git diff --check o'tdi",
+      "next_step": "Boshqa PC lar yangi AGENTS va COORDINATION ni olsin; global Claude qoidalari moslansin; HubWeb claim integratsiyasi qilinsin"
     }
   ]
 }
