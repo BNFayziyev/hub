@@ -2,7 +2,7 @@
 
 **Bir jumlada:** "Nega bunday, unday emas?" / "Agar ... bo'lganida-chi?" formatidagi ilmiy-ommabop vertikal (1080×1920, 60 fps) videolar, o'zbekcha diktor (Firdavs Urinov, AishaAI), hammasi kod bilan (Remotion).
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\nega` · Git: yo'q · Domen/URL: -
-**Holat:** 1-mavzu "Tish" — to'liq video (~105 s) render qilindi `out/tish-full.mp4`; VoiceLab kredit tugagani uchun f3, g1, g2 satrlari hozircha jim o'rinbosar
+**Holat:** 1-mavzu "Tish" — to'liq video v2 (~103 s) render qilindi `out/tish-full-v2.mp4`; foydalanuvchi ko'rib chiqmoqda
 **Oxirgi yangilanish:** 2026-10-11
 
 ## Stack
@@ -32,16 +32,17 @@ node tools/stills.mjs 1 4.6 9.3   # kadr tekshirish
 - Asosiy talab: video boshidan oxirigacha ushlab tursin (retention)
 - Hozircha kanal nomi/handle yo'q
 - Ovoz: Firdavs Urinov — tasdiqlandi
-- Nutq tabiiy bo'lsin, oshirib yuborilmasin
+- Nutq tabiiy bo'lsin: HAR BIR satr bitta so'rov ("..." va `separate` yo'q, qisqa pauza), tempo 1.07 — bo'laklangan/cho'zilgan iboralar sun'iy chiqdi, tez bitta jumlalar odamnikidek
+- Yakunda keyingi mavzu: "Nega azotdan nafas olmaymiz? U havoning 78 foizini tashkil qiladi-ku" (muz emas); 100 molekula sahnasi
 - Tishlar 3D bo'lsin (2D SVG versiyasi rad etildi)
 - Qismlab ishlash: avval hook, tasdiqdan keyin davomi
 - Mavzular ro'yxati: g'ildirak, muz suzishi, qon rangi, tishlar (tanlangan), azot, Oy, regeneratsiya, og'riq, katta Yer, Oysiz Yer, sekin yorug'lik, uyqusiz
 
 ## Keyingi qadamlar
-- [ ] VoiceLab kreditini to'ldirib: `tts.py --tag v2 --tempo 1.07 --only f3 g1 g2`, keyin layout.py, mix.py, render
 - [ ] To'liq video bo'yicha izohlar
 
 ## Tarix
+- 2026-10-11 | Claude | DESKTOP-QA8B43G | v2: barcha satrlar bitta so'rovda (tabiiy nutq), akula og'zi qayta (hajmli arra tishlar, teri/milk), yakun — azot (78/100 molekula)
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | To'liq video: nutq tabiiylashtirildi (tempo 1.07, yengil VO zanjiri), 7 ta yangi 3D sahna, avtomatik vaqt jadvali
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Hook 3D ga o'tkazildi (protsedural tishlar, rentgen shader)
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Loyiha yaratildi, "Tish" ssenariysi, hook render `out/tish-hook.mp4`
