@@ -3,7 +3,7 @@
 **Bir jumlada:** Samsara kamera devori — har kompaniya o'z Samsara API kaliti bilan: traklarning tashqi kameralari iVMS uslubidagi zich to'rda, xarita + trak yo'li izi, Safety Inbox videolari, Telegram guruhga hodisalar.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\samsara` · Git: yo'q · Domen/URL: https://samsara.kattabaza.uz (Cloudflare tunnel → localhost:3900)
 **Holat:** prod (Task `SamsaraWall`, bot @samsara_kattabot)
-**Oxirgi yangilanish:** 2026-10-11
+**Oxirgi yangilanish:** 2026-10-12
 
 ## Stack
 - Node 24 (`.ts` to'g'ridan-to'g'ri), Fastify 5, SQLite `node:sqlite`, grammy, React 18 + Vite 6, MapLibre GL
@@ -38,6 +38,8 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - 3 til, PWA, sozlamalar bo'limlari tayyor
 
 ## Keyingi qadamlar
+- [ ] Foydalanuvchi so'rovi: kompaniyalar uchun alohida login/parol kirishini qo'shish; muvaffaqiyatsiz ko'p urinishlarni cheklash. Mavjud Telegram kirishi bilan birga ishlashi kerak.
+- [ ] Vazifa e4ff2c60f80a4c55b0bd253e019de660: kodga kirish kutilmoqda. DESKTOP-QA8B43G C:\samsara manbasi kerak; ushbu PC dagi D:\samsara102 boshqa Python bot. Sayt kodi hali o'zgartirilmadi.
 - [ ] Kvota sarfini kuzatish ("bitvin" ham shu kalitni ishlatsa - ikki baravar)
 - [ ] Taklif: hodisani dismiss/coach qilish (Write Safety Events), kunlik hisobot Telegram'ga
 - Fakt: periodicStill har 360 s (6 daq), oralig'ini o'zgartirib bo'lmaydi; Samsara Live Stream API'da yo'q, litsenziyasiz 5 daq/oy/kamera; Helicopter View o'chiq (litsenziya yo'q)
@@ -57,6 +59,7 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - Hub kartasiga sed `${ln}a` bilan yozishda `ln` bo'sh bo'lsa - qator HAR qatordan keyin qo'shiladi (2026-10-11 shunday buzilgan, tiklandi)
 
 ## Tarix
+- 2026-10-12 | Codex | WIN-6V7C5DQJNII | e4ff2c60f80a4c55b0bd253e019de660: kompaniya login/parol va urinish cheklovi so'rovi qayd etildi; manba kodiga kirish yo'q, amalga oshirish kutilmoqda.
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Loyiha yaratildi: Samsara API (ko'p kompaniya), kamera devori iVMS uslubida, demo rejimi, Telegram/parol kirish
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Jonli rejim (retrieval konveyer, kunlik kvota), kamerasiz traklar chiqarildi
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Xarita menyusi (ro'yxat + MapLibre + Safety Inbox videolari), haydovchilar, trak yo'li izi
