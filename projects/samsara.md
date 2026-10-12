@@ -9,6 +9,7 @@
 - Node 24 (`.ts` to'g'ridan-to'g'ri), Fastify 5, SQLite `node:sqlite`, grammy, React 18 + Vite 6, MapLibre GL
 - treyler bilan bir xil uslub (ko'p kompaniya, Telegram kirish, AES-256-GCM shifrlangan kalitlar), PWA
 - Logo: KattaBaza katakchalari + katta kvadratda trak (`web/public/brand/logo.svg`); PNG/ICO ikonkalar treyler'dagi Playwright bilan chiqariladi (scratchpad `icons.cjs` mantiqi: SVG → 192/512/maskable/180/48-ICO); manifest `/app.webmanifest`
+- Login/parol: `core/logins.ts`; `companies.login` + `password_hash` (scrypt `s1$salt$hash`), `POST /api/auth/login` (login `admin` = ADMIN_PASSWORD, qolganlari kompaniya; kompaniya logini → `users.telegram_id = company-login:<id>` admin foydalanuvchi, Users ro'yxatida yashirin); o'rnatish Sozlamalar → Ulanish → "Login va parol" (`PUT/DELETE /api/company/login`, parol 8–128, login `[a-zA-Z0-9._-]{3,32}`, `admin/administrator/root` band). Cheklov bazada `login_attempts`: IP+login 5 xato → 15 daq, login 10 → 30 daq, IP 20 → 30 daq; blokda to'g'ri parol ham o'tmaydi; xato javob bir xil (login bor-yo'qligi bilinmaydi); loginni o'chirish sessiyani to'xtatadi
 - Uslub: kattabaza.uz kabi glass (panellar `--surface` shaffof + `backdrop-filter: var(--blur)`, fon to'q sariq yorug'lik), barcha ranglar CSS o'zgaruvchilarida; mavzu `web/src/theme.ts` (`pref.theme`: dark/light/auto → `<html data-theme>`), ☀/🌙 tugmasi + Sozlamalar → Shaxsiy; kamera maydoni ikkala mavzuda qorong'i; xarita foni mavzuga ergashadi (qo'lda tanlansa `map.baseChoice`)
 
 ## Arxitektura (qisqa)
@@ -38,8 +39,7 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - 3 til, PWA, sozlamalar bo'limlari tayyor
 
 ## Keyingi qadamlar
-- [ ] Foydalanuvchi so'rovi: kompaniyalar uchun alohida login/parol kirishini qo'shish; muvaffaqiyatsiz ko'p urinishlarni cheklash. Mavjud Telegram kirishi bilan birga ishlashi kerak.
-- [ ] Vazifa e4ff2c60f80a4c55b0bd253e019de660: kodga kirish kutilmoqda. DESKTOP-QA8B43G C:\samsara manbasi kerak; ushbu PC dagi D:\samsara102 boshqa Python bot. Sayt kodi hali o'zgartirilmadi.
+- [x] Kompaniya login/parol + urinishlar cheklovi (2026-10-12, DESKTOP-QA8B43G, Claude): vazifa e4ff2c60f80a4c55b0bd253e019de660 shu bilan bajarildi
 - [ ] Kvota sarfini kuzatish ("bitvin" ham shu kalitni ishlatsa - ikki baravar)
 - [ ] Taklif: hodisani dismiss/coach qilish (Write Safety Events), kunlik hisobot Telegram'ga
 - Fakt: periodicStill har 360 s (6 daq), oralig'ini o'zgartirib bo'lmaydi; Samsara Live Stream API'da yo'q, litsenziyasiz 5 daq/oy/kamera; Helicopter View o'chiq (litsenziya yo'q)
@@ -68,3 +68,4 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | KattaBaza logo, PWA, 3 til (uz/en/ru), sozlamalar bo'limlari + shaxsiy sozlamalar, Safety yorlig'i o'ng chetda; buzilgan hub kartasi tiklandi
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Yangi logo (KattaBaza + trak, C variant), ikonkalar /brand/ ga yangi nomlar bilan (eski ko'k favicon keshi); to'liq ekranda Safety paneli ham
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Glass/blur uslub (kattabaza.uz kabi), kunduzgi rejim + avtomatik; yashirin tabda birinchi yuklash tuzatildi
+- 2026-10-12 | Claude | DESKTOP-QA8B43G | Kompaniya login/parol (scrypt), urinishlar cheklovi (IP+login, bazada), kirish formasi login+parol; eski /api/auth/password olib tashlandi
