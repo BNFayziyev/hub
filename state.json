@@ -18,8 +18,12 @@
       "project": "samsara",
       "owner": "Codex/WIN-6V7C5DQJNII/samsara-login-20261012",
       "summary": "Kompaniyalar uchun login-parol kirishi va muvaffaqiyatsiz urinishlar cheklovi",
-      "status": "active",
-      "started": "2026-10-12T09:38:52+00:00"
+      "status": "blocked",
+      "started": "2026-10-12T09:38:52+00:00",
+      "updated": "2026-10-12T09:39:28+00:00",
+      "result": "So'rov Hub kartasiga yozildi; sayt kodi o'zgartirilmadi; DESKTOP-QA8B43G C:\\samsara ga kirish yo'q",
+      "tests": "Hub validate o'tdi; dastur testlari bajarilmadi, kod mavjud emas",
+      "next_step": "C:\\samsara sayt kodini private Git repo yoki manba arxivi orqali ulash; keyin kompaniya login/parol va urinish cheklovini qo'shish"
     }
   ]
 }
