@@ -19,8 +19,8 @@
 
 ## Ishga tushirish
 ```
-C:\synapseideo\.venv\Scripts\python tools	ts.py --tag v2 --tempo 1.07   # (--offline: yo'q satrlarga o'rinbosar)
-C:\synapseideo\.venv\Scripts\python tools\layout.py                      # cues.json: vaqtlar so'zlarga bog'lanadi
+C:\synapse\video\.venv\Scripts\python tools\tts.py --tag v2 --tempo 1.07   # (--offline: yo'q satrlarga o'rinbosar)
+C:\synapse\video\.venv\Scripts\python tools\layout.py                      # cues.json: vaqtlar so'zlarga bog'lanadi
 C:\synapse\video\.venv\Scripts\python tools\tts.py
 cd tools; C:\synapse\video\.venv\Scripts\python mix.py
 npx remotion render src/index.ts Tish out/tish-hook.mp4 --concurrency=12 --gl=angle
