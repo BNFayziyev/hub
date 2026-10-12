@@ -12,6 +12,14 @@
       "result": "Hub main: 688a663 GitHubga yuborildi; DESKTOP-QA8B43G lokal nusxasiga kirish yo'q, rollout tasdiqlanmagan",
       "tests": "7 unittest o'tdi; validator errors=0; installer matn saqlash va idempotentlik o'tdi; git diff --check o'tdi",
       "next_step": "Boshqa PC lar yangi AGENTS va COORDINATION ni olsin; global Claude qoidalari moslansin; HubWeb claim integratsiyasi qilinsin"
+    },
+    {
+      "id": "e4ff2c60f80a4c55b0bd253e019de660",
+      "project": "samsara",
+      "owner": "Codex/WIN-6V7C5DQJNII/samsara-login-20261012",
+      "summary": "Kompaniyalar uchun login-parol kirishi va muvaffaqiyatsiz urinishlar cheklovi",
+      "status": "active",
+      "started": "2026-10-12T09:38:52+00:00"
     }
   ]
 }
