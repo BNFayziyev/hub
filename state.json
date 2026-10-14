@@ -24,6 +24,14 @@
       "result": "So'rov Hub kartasiga yozildi; sayt kodi o'zgartirilmadi; DESKTOP-QA8B43G C:\\samsara ga kirish yo'q",
       "tests": "Hub validate o'tdi; dastur testlari bajarilmadi, kod mavjud emas",
       "next_step": "C:\\samsara sayt kodini private Git repo yoki manba arxivi orqali ulash; keyin kompaniya login/parol va urinish cheklovini qo'shish"
+    },
+    {
+      "id": "03a00ac4be0148e7adcf0ef04d074be0",
+      "project": "hub",
+      "owner": "Codex/WIN-6V7C5DQJNII/vision-handoff-20261015",
+      "summary": "Office vision yangi loyiha kartasi va topshirish materiallarini saqlash",
+      "status": "active",
+      "started": "2026-10-14T20:04:09+00:00"
     }
   ]
 }
