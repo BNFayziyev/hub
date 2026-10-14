@@ -36,6 +36,14 @@
       "result": "Hub main 7074f7f GitHubga yuborildi: umumiy office_vision kartasi va INDEX; texnik tafsilotlar va 4 kadr lokal office-vision-transfer.zip; dastur kodi yoq, RTX PCga ornatilmadi",
       "tests": "Hub validate errors=0; git diff --cached --check otdi; arxiv yaratildi",
       "next_step": "RTX PCda Hub kartasini va foydalanuvchi kochirgan arxivni oqish, office_vision claim olib pilotni boshlash"
+    },
+    {
+      "id": "f70365a64c86413882f710c9c47635aa",
+      "project": "office_vision",
+      "owner": "Codex/WIN-6V7C5DQJNII/vision-full-20261015",
+      "summary": "Foydalanuvchi barcha topshirish malumoti va rasmlarni public Hubda saqlashni aniq soradi",
+      "status": "active",
+      "started": "2026-10-14T20:06:24+00:00"
     }
   ]
 }
