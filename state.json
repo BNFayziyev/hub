@@ -30,8 +30,12 @@
       "project": "hub",
       "owner": "Codex/WIN-6V7C5DQJNII/vision-handoff-20261015",
       "summary": "Office vision yangi loyiha kartasi va topshirish materiallarini saqlash",
-      "status": "active",
-      "started": "2026-10-14T20:04:09+00:00"
+      "status": "done",
+      "started": "2026-10-14T20:04:09+00:00",
+      "updated": "2026-10-14T20:06:00+00:00",
+      "result": "Hub main 7074f7f GitHubga yuborildi: umumiy office_vision kartasi va INDEX; texnik tafsilotlar va 4 kadr lokal office-vision-transfer.zip; dastur kodi yoq, RTX PCga ornatilmadi",
+      "tests": "Hub validate errors=0; git diff --cached --check otdi; arxiv yaratildi",
+      "next_step": "RTX PCda Hub kartasini va foydalanuvchi kochirgan arxivni oqish, office_vision claim olib pilotni boshlash"
     }
   ]
 }
