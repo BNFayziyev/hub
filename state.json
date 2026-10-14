@@ -42,8 +42,12 @@
       "project": "office_vision",
       "owner": "Codex/WIN-6V7C5DQJNII/vision-full-20261015",
       "summary": "Foydalanuvchi barcha topshirish malumoti va rasmlarni public Hubda saqlashni aniq soradi",
-      "status": "active",
-      "started": "2026-10-14T20:06:24+00:00"
+      "status": "done",
+      "started": "2026-10-14T20:06:24+00:00",
+      "updated": "2026-10-14T20:07:16+00:00",
+      "result": "Hub main 2c947a7 GitHubga yuborildi; toliq office_vision hujjati va 4 kamera kadri foydalanuvchi aniq talabi bilan public repoda; parollar yoq; dastur hali yozilmagan",
+      "tests": "Hub validate errors=0; staged diff check otdi; push muvaffaqiyatli",
+      "next_step": "RTX PCda repodan AGENTS COORDINATION office_vision va 4 kadrni oqib yangi claim bilan lokal pilotni qurish"
     }
   ]
 }
