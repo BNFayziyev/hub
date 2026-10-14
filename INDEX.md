@@ -27,3 +27,5 @@ Avval shu jadvalni o'qing, keyin faqat kerakli kartani oching. Qoidalar: [AGENTS
 | [usbot](projects/usbot.md) | 3x-ui monitoring Telegram boti | `C:\usbot` (DESKTOP-QA8B43G) | ishlayapti? | 2026-10-08 |
 | [x-ui](projects/x-ui.md) | 3x-ui VPN panel (tayyor dastur) | `C:\x-ui` (DESKTOP-QA8B43G) | ishlayapti | 2026-10-08 |
 | [hub](projects/hub.md) | AIlar va kompyuterlar hamkorligi, xotira va vazifalar | `C:\hub` (HubWeb), AIlar alohida clone | protokol tayyor; joriy etish kerak | 2026-10-12 |
+
+| [office_vision](projects/office_vision.md) | Lokal kamera tahlili, 21 joy, Time integratsiya | RTX 5060 Ti PC (yo'l ?) | g'oya; oqimlar ochilgan, kod hali yo'q | 2026-10-15 |
