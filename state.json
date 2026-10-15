@@ -48,6 +48,14 @@
       "result": "Hub main 2c947a7 GitHubga yuborildi; toliq office_vision hujjati va 4 kamera kadri foydalanuvchi aniq talabi bilan public repoda; parollar yoq; dastur hali yozilmagan",
       "tests": "Hub validate errors=0; staged diff check otdi; push muvaffaqiyatli",
       "next_step": "RTX PCda repodan AGENTS COORDINATION office_vision va 4 kadrni oqib yangi claim bilan lokal pilotni qurish"
+    },
+    {
+      "id": "819c6a21eb594e80a20fe25ceb5b9afc",
+      "project": "office_vision",
+      "owner": "Codex/ADVANCETRANSINC/pilot-20261014",
+      "summary": "RTX PC lokal kamera piloti",
+      "status": "active",
+      "started": "2026-10-15T01:25:35+00:00"
     }
   ]
 }
