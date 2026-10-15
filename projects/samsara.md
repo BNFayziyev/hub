@@ -14,6 +14,7 @@
 
 ## Arxitektura (qisqa)
 - `server/src/samsara/client.ts` — Samsara REST (US/EU/CA), 220 ms oraliq, 429 qayta urinish
+- `server/src/motive/client.ts` — Motive REST (`x-api-key`, api.gomotive.com); `companies.provider` = `samsara`|`motive` (migratsiya 9); Motive sikli `runMotive` (poller): `/v3/vehicle_locations` + `/v1/compliance_driving_events` (3 kun). Kadr/video yo'q (Samsara-only: jonli rasm, retrieval)
 - `server/src/jobs/poller.ts` — har kompaniya sikli: `/fleet/vehicles` (10 daq), `/fleet/vehicles/stats?types=gps,engineStates`, `GET /cameras/media` (dashcamRoadFacing, kursor kv `media_cursor:<id>`), retrieval holati, haydovchilar (`/fleet/driver-vehicle-assignments`, 2 daq), Safety (`/safety-events/stream`, kursor `safety_cursor:<id>`, 1 daq)
 - Jonli rejim (`companies.live_seconds`): devor ko'rinib turgan traklarni `/api/wall?watch=&focus=` bilan bildiradi (20 s TTL); `liveTick` (3 s) yo'ldagilarga `POST /cameras/media/retrieval` image (ochilgan trak 15 s), konveyer, kunlik kvota ulushi, 90% da to'xtaydi
 - Kadrlar/videolar diskda: `data/media/<kompaniya>/<trak>/` (kadr 24 soat, klip 7 kun), `safety-<trak>/` (14 kun; tashqi PRIMARY + ichki SECONDARY `-in`)
@@ -70,3 +71,4 @@ Dev: `.claude/launch.json` → `samsara-dev` (port 3901, `.env.dev`, `data-dev/`
 - 2026-10-11 | Claude | DESKTOP-QA8B43G | Glass/blur uslub (kattabaza.uz kabi), kunduzgi rejim + avtomatik; yashirin tabda birinchi yuklash tuzatildi
 - 2026-10-12 | Claude | DESKTOP-QA8B43G | Kompaniya login/parol (scrypt), urinishlar cheklovi (IP+login, bazada), kirish formasi login+parol; eski /api/auth/password olib tashlandi
 - 2026-10-12 | Claude | DESKTOP-QA8B43G | Telegram bot xabarlari (caption, hodisa turlari, /link tugmalari, buyruqlar) ingliz tiliga o'tkazildi; /holat → /status (eski nom ham ishlaydi); vaqt TOSH → UZT
+- 2026-10-15 | Claude | DESKTOP-QA8B43G | Platforma qayta ishga tushirildi. Motive provayderi qo'shildi: klient, poller `runMotive`, Sozlamalar → Provayder; video/kadr Motive'da yo'q
