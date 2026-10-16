@@ -2,7 +2,7 @@
 
 **Bir jumlada:** Foydalanuvchi rasm/video/GIF/stiker/matn yuboradi -> statik, video, animatsiyali (TGS) stiker yoki custom emoji (premium) to'plamiga qo'shiladi; matndan AI (Claude) SVG/Lottie chizadi. Bo1AI `/stiker` orqali ham chaqiradi.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\stk` · Git: yo'q
-**Holat:** kod tayyor, token kutilmoqda (BOT_TOKEN, ADMIN_ID, CLAUDE_CODE_OAUTH_TOKEN `.env` ga yozilishi kerak); jonli sinov qilinmagan
+**Holat:** bot ishlayapti (@emoji_AIbot, `run.bat`, fon rejimi/avtostart yo'q); AI uchun CLAUDE_CODE_OAUTH_TOKEN hali `.env` da yo'q
 **Oxirgi yangilanish:** 2026-10-16
 
 ## Stack
@@ -23,4 +23,5 @@
 - Claude tokeni Bo1AI/synapse_instagram bilan umumiy obuna limitini yeydi
 
 ## Tarix
+- 2026-10-16 | Claude | DESKTOP-QA8B43G | Jonli sinov: statik/video/TGS va emoji statik/TGS to'plamlari Telegramda yaratildi (adminda `Sinov` to'plamlari qoldi); sarlavhada bot nik asl registrda
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Loyiha yaratildi: bot, media konvertatsiya (ffmpeg/Pillow sinovdan o'tdi), AI (soxta javob bilan sinaldi), Bo1AI /stiker
