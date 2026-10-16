@@ -23,6 +23,7 @@
 - Claude tokeni Bo1AI va synapse_instagram bilan umumiy (`C:\stk\.env` da ham) — token yangilansa bu yerda ham yangilang; umumiy obuna limitini yeydi
 
 ## Tarix
+- 2026-10-16 | Claude | DESKTOP-QA8B43G | Qo'lda chizilgan video stikerlar (`C:\stk	mp	erm3.py globe|logo`): yarim shaffof macOS terminal `synapse@IT`, belgilardan yashil globus va 3D aylanuvchi Synapse logo; adminga yuborildi
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | AI jonli sinov (API orqali): statik SVG ~16 s, animatsiyali Lottie ~3.5 daq, ikkalasi birinchi urinishda qabul qilindi
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Jonli sinov: statik/video/TGS va emoji statik/TGS to'plamlari Telegramda yaratildi (adminda `Sinov` to'plamlari qoldi); sarlavhada bot nik asl registrda
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Loyiha yaratildi: bot, media konvertatsiya (ffmpeg/Pillow sinovdan o'tdi), AI (soxta javob bilan sinaldi), Bo1AI /stiker
