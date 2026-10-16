@@ -2,7 +2,7 @@
 
 **Bir jumlada:** Foydalanuvchi rasm/video/GIF/stiker/matn yuboradi -> statik, video, animatsiyali (TGS) stiker yoki custom emoji (premium) to'plamiga qo'shiladi; matndan AI (Claude) SVG/Lottie chizadi. Bo1AI `/stiker` orqali ham chaqiradi.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\stk` · Git: yo'q
-**Holat:** bot ishlayapti (@emoji_AIbot, `run.bat`, fon rejimi/avtostart yo'q); AI uchun CLAUDE_CODE_OAUTH_TOKEN hali `.env` da yo'q
+**Holat:** bot ishlayapti (@emoji_AIbot, `run.bat`, fon rejimi/avtostart yo'q); AI ishlayapti (Bo1AI tokeni ko'chirildi)
 **Oxirgi yangilanish:** 2026-10-16
 
 ## Stack
@@ -20,8 +20,9 @@
 
 ## Ehtiyot bo'ling
 - Premium effektli stikerlarni bot yarata olmaydi. Custom emoji to'plam uchun egasida Premium kerak bo'lishi mumkin (Telegram xatosi foydalanuvchiga ko'rsatiladi)
-- Claude tokeni Bo1AI/synapse_instagram bilan umumiy obuna limitini yeydi
+- Claude tokeni Bo1AI va synapse_instagram bilan umumiy (`C:\stk\.env` da ham) — token yangilansa bu yerda ham yangilang; umumiy obuna limitini yeydi
 
 ## Tarix
+- 2026-10-16 | Claude | DESKTOP-QA8B43G | AI jonli sinov (API orqali): statik SVG ~16 s, animatsiyali Lottie ~3.5 daq, ikkalasi birinchi urinishda qabul qilindi
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Jonli sinov: statik/video/TGS va emoji statik/TGS to'plamlari Telegramda yaratildi (adminda `Sinov` to'plamlari qoldi); sarlavhada bot nik asl registrda
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Loyiha yaratildi: bot, media konvertatsiya (ffmpeg/Pillow sinovdan o'tdi), AI (soxta javob bilan sinaldi), Bo1AI /stiker
