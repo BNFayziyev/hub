@@ -9,6 +9,7 @@
 - Python 3.14 (.venv), python-telegram-bot 22, Pillow, imageio-ffmpeg (ffmpeg, VP9), resvg-py (SVG->PNG), rlottie-python (TGS tekshiruv), aiohttp, SQLite `data\stk.db`
 
 ## Arxitektura
+- `stk/terminal.py` — `/terminal so'z`: figlet terminal stikeri (~3 s, AI siz; tayyor sahnalar done/fixed/ok/checking/1 min/ty/rahmat/assalomu alaykum, boshqa so'z 1-3 qatorga bo'linadi)
 - `stk/bot.py` (interfeys, tugmalar), `maker.py` (job->baytlar), `media.py` (webp/webm/tgs), `ai.py` (Claude: SVG statik, Lottie animatsiya, xatoda qayta urinish), `claude.py` (claude -p, Bo1AI'dagidek), `sets.py` (to'plam nomi `u<id>_<kod><n>_by_<bot>`, sarlavha `... @<bot>`), `api.py` (127.0.0.1:8765 `/make`)
 - Alohida to'plam har tur uchun: static, video, animated, emoji_static/video/animated
 
@@ -23,6 +24,7 @@
 - Claude tokeni Bo1AI va synapse_instagram bilan umumiy (`C:\stk\.env` da ham) — token yangilansa bu yerda ham yangilang; umumiy obuna limitini yeydi
 
 ## Tarix
+- 2026-10-17 | Claude | DESKTOP-QA8B43G | Botga `/terminal` buyrug'i qo'shildi (terminal.py, pyfiglet), buyruqlar menyusi; bot qayta ishga tushirildi
 - 2026-10-17 | Claude | DESKTOP-QA8B43G | `tmp/term6.py` (pyfiglet ANSI Shadow, haqiqiy terminal to'ri): ASSALOMU ALAYKUM, DONE, FIXED, OK, CHECKING, 1 MIN, TY, RAHMAT — alohida to'plamlar `synapse_terminal_by_emoji_aibot` va `synapse_terminal_emoji_by_emoji_aibot` (bot DB sida yo'q)
 - 2026-10-17 | Claude | DESKTOP-QA8B43G | `tmp/term5.py`: donut, cmatrix->SYNAPSE, git push->BAJARILDI, figlet Rahmat stikerlari; adminga yuborildi
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | `tmp/term4.py`: synapseit.uz 3D logotipi (3 bo'lak S, orbitalar; LOGO_PIECES dan ray-cast) va `neofetch` stikerlari belgilardan; adminga yuborildi
