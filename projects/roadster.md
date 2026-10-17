@@ -2,8 +2,8 @@
 
 **Bir jumla:** "The Unseen How" reelining (Tesla Roadster sovuq gazli dvigatellar bilan 5 ta Tesla ustidan sakraydi) o'zbekcha, qisqartirilgan (~70 s) va yaxshilangan 3D versiyasi. Ovoz: Firdavs Urinov (AishaAI). Ichida o'zbekcha misollar bor: Gentra, to'y sharlari, so'm.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\roadster` · Git: yo'q · `C:\yer` ish usulining nusxasi (`node_modules` → `C:\nega\node_modules` junction)
-**Holat:** hook v4 (0–13.9 s) render qilingan `out/hook-v4.mp4`, foydalanuvchi ko'rib chiqmoqda
-**Oxirgi yangilanish:** 2026-10-16
+**Holat:** hook v5 (0–13.9 s) `out/hook-v5.mp4`: 3D + Tesla originallari (`public/tesla/*.mp4`, manba `assets/reels/`, yt-dlp)
+**Oxirgi yangilanish:** 2026-10-17
 
 ## Ssenariy
 `script/ssenariy.md` — 11 satr: sakrash → havo → shar → bak + Gentra ballonidan ×150 bosim → 10 soplo → 6 ta Gentrani ko'taradi → 250/125 = 2 s → sakraydi → 35 kVt·soat (xonadonning 3–4 kunlik elektri) → 3 soat vs 2 s → "3 milliard so'mlik tomosha?"
@@ -28,6 +28,7 @@ tools/tts.py --tag v1 --tempo 1.0 --gap 0.25 -> layout.py --vo v1 -> (cd tools) 
 - [ ] 3–11 satrlar sahnalari
 
 ## Tarix
+- 2026-10-17 | Claude | DESKTOP-QA8B43G | Hook v5: 4 reel yuklandi (`assets/reels`), 3 ta original Tesla kadri hookka qo'yildi (`ORIGS` Hook.tsx, 'BU MONTAJ EMAS'), ssenariy v3 yaxshilashlar + kadrlar xaritasi
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Hook v4: Roadster 2026 dizayni bo'yicha qirrali (`three/facet.ts`: tekis yuzalar, ikki rang, bronza shisha, qanot, diffuzor, SYNAPSE raqami); Cybertruck qo'shildi (qator o'rtasida); 2-reel (DejbdmGhyhD) g'oyalari ssenariyga yozildi
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Hook v3: kuzov kesimi qirrali (tekis yon, yelka/ostona qirralari) — v2 "o'yinchoqdek yumaloq" deb rad etildi; `Garage` kompozitsiyasi (model tekshiruvi, COMP=Garage stills)
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Hook v2: ovoz sekinroq + uzunroq pauzalar, loft kuzovli yangi Roadster va Model Y, render hook-v2.mp4
