@@ -2,7 +2,7 @@
 
 **Bir jumla:** "The Unseen How" reelining (Tesla Roadster sovuq gazli dvigatellar bilan 5 ta Tesla ustidan sakraydi) o'zbekcha, qisqartirilgan (~70 s) va yaxshilangan 3D versiyasi. Ovoz: Firdavs Urinov (AishaAI). Ichida o'zbekcha misollar bor: Gentra, to'y sharlari, so'm.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\roadster` · Git: yo'q · `C:\yer` ish usulining nusxasi (`node_modules` → `C:\nega\node_modules` junction)
-**Holat:** hook v5 (0–13.9 s) `out/hook-v5.mp4`: 3D + Tesla originallari (`public/tesla/*.mp4`, manba `assets/reels/`, yt-dlp)
+**Holat:** to'liq reel v1 (~100 s) `out/roadster-v1.mp4`: hook + 9 ta tana sahnasi (`scenes/Body.tsx`: 3D sahna + 2D infografika + 10 ta original Tesla klipi `public/tesla/`)
 **Oxirgi yangilanish:** 2026-10-17
 
 ## Ssenariy
@@ -25,9 +25,11 @@ tools/tts.py --tag v1 --tempo 1.0 --gap 0.25 -> layout.py --vo v1 -> (cd tools) 
 
 ## Keyingi qadamlar
 - [ ] Hook bo'yicha izohlar (ovoz, 'i' tovushi, kamera)
-- [ ] 3–11 satrlar sahnalari
+- [x] 3–11 satrlar sahnalari (v1)
+- [ ] Foydalanuvchi izohlari; uzunlik ~100 s (qisqartirish kerakmi?)
 
 ## Tarix
+- 2026-10-17 | Claude | DESKTOP-QA8B43G | To'liq reel v1: b3–b11 ovozi (VoiceLab, gap 0.25), layout/mix tana bo'limi, Body.tsx (3D + 2D + 7 ta original klip), render roadster-v1.mp4; Python paketlari qayta o'rnatildi (soundfile, pedalboard, pyloudnorm)
 - 2026-10-17 | Claude | DESKTOP-QA8B43G | Hook v5: 4 reel yuklandi (`assets/reels`), 3 ta original Tesla kadri hookka qo'yildi (`ORIGS` Hook.tsx, 'BU MONTAJ EMAS'), ssenariy v3 yaxshilashlar + kadrlar xaritasi
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Hook v4: Roadster 2026 dizayni bo'yicha qirrali (`three/facet.ts`: tekis yuzalar, ikki rang, bronza shisha, qanot, diffuzor, SYNAPSE raqami); Cybertruck qo'shildi (qator o'rtasida); 2-reel (DejbdmGhyhD) g'oyalari ssenariyga yozildi
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Hook v3: kuzov kesimi qirrali (tekis yon, yelka/ostona qirralari) — v2 "o'yinchoqdek yumaloq" deb rad etildi; `Garage` kompozitsiyasi (model tekshiruvi, COMP=Garage stills)
