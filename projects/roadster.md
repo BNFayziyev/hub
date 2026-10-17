@@ -2,7 +2,7 @@
 
 **Bir jumla:** "The Unseen How" reelining (Tesla Roadster sovuq gazli dvigatellar bilan 5 ta Tesla ustidan sakraydi) o'zbekcha, qisqartirilgan (~70 s) va yaxshilangan 3D versiyasi. Ovoz: Firdavs Urinov (AishaAI). Ichida o'zbekcha misollar bor: Gentra, to'y sharlari, so'm.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\roadster` · Git: yo'q · `C:\yer` ish usulining nusxasi (`node_modules` → `C:\nega\node_modules` junction)
-**Holat:** reel v4 (~88 s) `out/roadster-v4.mp4` (+ `-instagram.mp4`): ssenariy v6 — Kun.uz uslubi (2 ta sir, 3 versiya, raqamlar); v3 (ilmiy) foydalanuvchi telefondan joylashi mumkin
+**Holat:** reel v5 (~70 s) `out/roadster-v5.mp4` (+ `-instagram.mp4`): ssenariy v7 — yangi hook (`scenes/Hook2.tsx`: teskari yurish original kadri), tabiiy raqamlar
 **Oxirgi yangilanish:** 2026-10-17
 
 ## Ssenariy
@@ -14,6 +14,7 @@ tools/tts.py --tag v1 --tempo 1.0 --gap 0.25 -> layout.py --vo v1 -> (cd tools) 
 3D: `three/loft.ts` (kesimlardan kuzov: superellips kesim, g'ildirak arkalari, qoraytirilgan pastki qism), `three/Car.tsx` (Roadster: Kamm tail + 4 oltin soplo; Model Y uslubidagi krossover, Tesla zavod ranglari), `three/Jets.tsx` (deterministik zarrachalar + "sahna soati": sekinlashtirish, muzlatish, orqaga), `three/World.tsx` (nam asfalt: Reflector + qoplama). Sahna: `scenes/Hook.tsx`
 
 ## Muhim qarorlar (foydalanuvchi)
+- Hook 0 dan boshqacha (eski 'beshta Tesla' hook rad etildi, `archive/Hook_v4.tsx`); 'bulut', 'soplo' so'zlari ishlatilmasin; raqamlar tabiiy gapda aytilsin
 - 2026-10-17: Nyuton/formulasiz, Kun.uz reeli (DejLj-GtSmX) kabi qisqa yangilik-tushuntirish uslubi
 - Instagramga o'zi telefondan joylaydi (Chrome kengaytmasi 10 MB dan katta fayl yuklay olmaydi)
 - Ssenariy ilmiy bo'lsin: hayotiy/o'zbekcha misollar va arifmetika (250÷125, uyda zaryad) kerak emas; ventilyator bilan yopishish albatta bo'lsin
@@ -32,6 +33,7 @@ tools/tts.py --tag v1 --tempo 1.0 --gap 0.25 -> layout.py --vo v1 -> (cd tools) 
 - [ ] Foydalanuvchi izohlari; uzunlik ~116 s (manba 98 s)
 
 ## Tarix
+- 2026-10-17 | Claude | DESKTOP-QA8B43G | Ssenariy v7: yangi hook (Hook2.tsx), butun ovoz qayta (vo/v7), mix hook qismi qayta, time.ts HITS/Video tension yangilandi; render roadster-v5
 - 2026-10-17 | Claude | DESKTOP-QA8B43G | Ssenariy v6 (Kun.uz uslubi): tana qayta o'qitildi (vo/v6), Body.tsx: Secrets/Versions/Specs kartalari + rentgen soplolar + ventilyator diagrammasi; render roadster-v4
 - 2026-10-17 | Claude | DESKTOP-QA8B43G | Ssenariy v5 (ilmiy): tana qayta yozildi va o'qitildi (assets/vo/v5), ventilyator/bosim diagrammasi, adiabatik sovish, sun'iy yo'ldosh, m_ramp klipi; render roadster-v3.mp4
 - 2026-10-17 | Claude | DESKTOP-QA8B43G | Ssenariy v4 butunlay qayta: manba reel transkripsiyasi (faster-whisper), 'Gentra' ovozda 'Jentra', har jumla alohida TTS (assets/vo/v4); Guts.tsx (shaffof kuzov, 2 karbon bak, klapan, quvurlar, 10 soplo), Body.tsx qayta yozildi; render roadster-v2.mp4
