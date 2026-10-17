@@ -23,6 +23,7 @@
 - Claude tokeni Bo1AI va synapse_instagram bilan umumiy (`C:\stk\.env` da ham) — token yangilansa bu yerda ham yangilang; umumiy obuna limitini yeydi
 
 ## Tarix
+- 2026-10-17 | Claude | DESKTOP-QA8B43G | `tmp/term6.py` (pyfiglet ANSI Shadow, haqiqiy terminal to'ri): ASSALOMU ALAYKUM, DONE, FIXED, OK, CHECKING, 1 MIN, TY, RAHMAT — alohida to'plamlar `synapse_terminal_by_emoji_aibot` va `synapse_terminal_emoji_by_emoji_aibot` (bot DB sida yo'q)
 - 2026-10-17 | Claude | DESKTOP-QA8B43G | `tmp/term5.py`: donut, cmatrix->SYNAPSE, git push->BAJARILDI, figlet Rahmat stikerlari; adminga yuborildi
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | `tmp/term4.py`: synapseit.uz 3D logotipi (3 bo'lak S, orbitalar; LOGO_PIECES dan ray-cast) va `neofetch` stikerlari belgilardan; adminga yuborildi
 - 2026-10-16 | Claude | DESKTOP-QA8B43G | Qo'lda chizilgan video stikerlar (`C:\stk	mp	erm3.py globe|logo`): yarim shaffof macOS terminal `synapse@IT`, belgilardan yashil globus va 3D aylanuvchi Synapse logo; adminga yuborildi
