@@ -44,6 +44,7 @@
 - `.env` da maxfiy kalitlar bor — hubga yozilmaydi.
 
 ## Tarix
+- 2026-10-19 | Claude | DESKTOP-QA8B43G | SEO: /taplink va /ru/taplink sahifalari (tablink, таблинк va boshqa xato yozilishlar), /tablink -> /taplink 301
 - 2026-10-19 | Claude | DESKTOP-QA8B43G | Do'kon paneli (/shop), Electron desktop dastur, o'rnatish taklifi, Barbershop sohasi, SEO sahifalar + sitemap (DB zaxira: data/backup-2026-10-19.db)
 - 2026-10-09 | Claude | DESKTOP-QA8B43G | QR poster + qalamcha tahrir, profil xabarlari (TG bot + Web Push), buyurtmada erkin son va minimal miqdor
 - 2026-10-09 | Claude | DESKTOP-QA8B43G | Prod: build + Vizitka xizmati qayta ishga tushirildi (DB zaxira: data/backup-2026-10-09)
