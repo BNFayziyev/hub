@@ -3,7 +3,7 @@
 **Bir jumlada:** kattabaza.uz sayti: ilovalar katalogi, IP qidiruv, kalitlar, servislar (time, treyler, camera, med), AI yordamchi.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\kattabaza-main` · Git: https://github.com/BNFayziyev/kattabaza.git · Domen/URL: kattabaza.uz
 **Holat:** ishlayapti (prod)
-**Oxirgi yangilanish:** 2026-10-08
+**Oxirgi yangilanish:** 2026-10-19
 
 ## Stack
 - React + Vite + Tailwind, Leaflet, react-router, Supabase; Node server (`server/index.js`, port 8090); Cloudflare Tunnel; Telegram bot/userbot
@@ -30,3 +30,4 @@
 
 ## Tarix
 - 2026-10-08 | Claude | DESKTOP-QA8B43G | Karta yaratildi (README/package.json asosida, chuqur tahlil qilinmagan)
+- 2026-10-19 | Claude | DESKTOP-QA8B43G | Menyuga Med (live), Vizitka, BronBar, Samsara, BotChat qo'shildi (src/lib/site.js SERVICES); SEO: seo.js, sitemap, index.html; tools/slides/live-capture.mjs. Server qayta ishga tushirilishi kerak (seo.js xotirada)
