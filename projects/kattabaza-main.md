@@ -31,3 +31,4 @@
 ## Tarix
 - 2026-10-08 | Claude | DESKTOP-QA8B43G | Karta yaratildi (README/package.json asosida, chuqur tahlil qilinmagan)
 - 2026-10-19 | Claude | DESKTOP-QA8B43G | Menyuga Med (live), Vizitka, BronBar, Samsara, BotChat qo'shildi (src/lib/site.js SERVICES); SEO: seo.js, sitemap, index.html; tools/slides/live-capture.mjs. Server qayta ishga tushirilishi kerak (seo.js xotirada)
+- 2026-10-19 | Claude | DESKTOP-QA8B43G | BronBar kattabaza.uz saytidan arxivlandi (menyu/bosh sahifa/sitemap/SEO'dan olib tashlandi)
