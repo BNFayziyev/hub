@@ -2,7 +2,7 @@
 
 **Bir jumlada:** Amerika logistika kompaniyalari uchun: haydovchi guruhida "PTI" so'zi yozilsa bot Mini App tugmasini beradi, haydovchi 12 ta shablon rasmni oladi, bot PDF hisobot yasab haydovchi guruhiga va asosiy (mavzuli) guruhdagi haydovchi mavzusiga tashlaydi; sayt: tarix, chek-list muharriri, admin panel.
 **Joylashuv:** `DESKTOP-QA8B43G`: `C:\pti` · Git: yo'q · Domen/URL: https://pti.kattabaza.uz (Cloudflare tunnel → localhost:3950, hali ulanmagan)
-**Holat:** kod tayyor va lokal sinovdan o'tdi (49 ta e2e tekshiruv, soxta Telegram bilan); prod'ga chiqarilmagan — bot tokeni va domen kutilmoqda
+**Holat:** kod tayyor va lokal sinovdan o'tdi (73 ta e2e tekshiruv, soxta Telegram bilan; foto + video rejimi); prod'ga chiqarilmagan — bot tokeni va domen kutilmoqda
 **Oxirgi yangilanish:** 2026-10-24
 
 ## Stack
@@ -28,19 +28,21 @@ sh scripts/dev-demo.sh        # demo: http://localhost:3951 (parol demo-pass)
 
 ## Hozirgi holat
 - Tayyor: bot (guruh ulash, kalit so'z, so'rov, natija, mavzular, jadval), haydovchi Mini App (12 qadam, kamera, vaqt belgisi, lokatsiya ixtiyoriy, All good/Problem), PDF, ommaviy hisobot, sayt (obzor, tarix, haydovchilar, guruhlar, chek-list, jadval, jamoa, sozlamalar, jurnal, administratsiya), ru/uz tarjimalar to'liq
-- Tekshirilgan: e2e (mock), brauzerda desktop va mobil ko'rinish; haqiqiy Telegram bilan sinalmagan
+- Video rejimi (2026-10-24): Sozlamalar → "Video inspections" switch; haydovchi Rasm/Video tanlaydi; qadamda `accept="video/*" capture`, ≤30 s (ilovada), siqmasdan XHR progress bilan yuklanadi, poster kadr canvas'da → `PUT /api/m/:token/item/:pos/poster`. Server magic-byte: ftyp → `.mp4`, EBML → `.webm` (`VIDEO_MAX_MB`, sukut 95). Fayl route'lari Content-Type + Range (206/416). PDF: poster + play belgisi + bosiladigan `Video: <PUBLIC_URL>/api/v/<token>/<n>`; Telegram caption "🎥 N videos"; panel/hisobotda `<video controls>`
+- Tekshirilgan: e2e (mock) 73/73, brauzerda desktop va mobil ko'rinish (video: MediaRecorder webm bilan yuklash + poster + lightbox); haqiqiy Telegram/telefon kamerasi bilan sinalmagan
 
 ## Keyingi qadamlar
 - [ ] Egasi: @BotFather'da bot yaratib tokenni `.env` ga yozishi; `/setprivacy` Disable, `/newapp` (MINIAPP_SHORT), `/setmenubutton`
 - [ ] Cloudflare'da `pti.kattabaza.uz → http://localhost:3950`; keyin `install-task.ps1`
 - [ ] Haqiqiy Telegramda sinov (guruh qo'shish, mavzu, kamera iOS/Android)
-- [ ] Video rejimi (hozir "Coming soon", bazada `media` ustuni tayyor)
+- [ ] Video: haqiqiy iPhone/Android'da yozib sinash (iOS .mov/HEVC, Telegram webview'da `capture`, 30 s klip hajmi < 95 MB)
 - [ ] 7–8 qadam nomi video asosida taxminiy ("Left trailer tires"); kompaniya o'zi tahrirlaydi
 
 ## Muhim qarorlar
 - Haydovchi sahifasi hisob yaratmaydi: havola = kalit (24 soat). Bot guruhda "PTI" ko'rishi uchun admin bo'lishi yoki privacy o'chirilishi shart
 - Asosiy guruhda PTI so'ralmaydi; so'rov faqat haydovchi guruhida (shu haydovchiga tegishli)
 - Rasm faqat kamera (`capture`), vaqt belgisi canvas'da; PDF inglizcha, ilova tili sozlanadi (sukut inglizcha)
+- Video qayta kodlanmaydi (serverda ffmpeg yo'q): iPhone HEVC klipi Windows Chrome'da ochilmasligi mumkin. Limit 95 MB — Cloudflare 100 MB dan katta so'rovni o'tkazmaydi
 - Raqobatchi/namuna: RaiseDash (@raisedashbot) videosi — oqim shunga o'xshash, lekin PDF, mavzular, sayt tarixi bizda qo'shimcha
 
 ## Ehtiyot bo'ling
@@ -50,3 +52,4 @@ sh scripts/dev-demo.sh        # demo: http://localhost:3951 (parol demo-pass)
 
 ## Tarix
 - 2026-10-24 | Claude | DESKTOP-QA8B43G | Loyiha noldan yaratildi: bot, Mini App, PDF, sayt, admin, tarjimalar, e2e testlar, README
+- 2026-10-24 | Claude | DESKTOP-QA8B43G | 8bef7ce7: video rejimi (sozlama, Mini App yozish/yuklash/poster, mp4/webm + Range, PDF havola, caption, ru/uz), e2e 73/73
