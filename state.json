@@ -62,8 +62,12 @@
       "project": "pti",
       "owner": "Claude/DESKTOP-QA8B43G/pti1",
       "summary": "PTI bot yaratildi: karta va indeks",
-      "status": "active",
-      "started": "2026-10-24T01:07:05+00:00"
+      "status": "done",
+      "started": "2026-10-24T01:07:05+00:00",
+      "updated": "2026-10-24T01:07:07+00:00",
+      "result": "Kod: C:/pti (git yo'q); Hub: commit 6e284b9 (projects/pti.md + INDEX); prodga o'rnatilmadi",
+      "tests": "sh scripts/test-e2e.sh: 49/49 o'tdi (soxta Telegram); typecheck o'tdi; haqiqiy Telegramda sinalmagan",
+      "next_step": "Bot tokeni + Cloudflare + install-task.ps1, keyin haqiqiy Telegramda sinov"
     }
   ]
 }
