@@ -74,8 +74,12 @@
       "project": "pti",
       "owner": "Claude/DESKTOP-QA8B43G/pti-video",
       "summary": "PTI video rejimi",
-      "status": "active",
-      "started": "2026-10-24T01:53:39+00:00"
+      "status": "done",
+      "started": "2026-10-24T01:53:39+00:00",
+      "updated": "2026-10-24T01:54:52+00:00",
+      "result": "Kod: C:/pti (git yo'q) video rejimi; Hub: commit 7954fd1; :3950 dagi PtiBot server qayta ishga tushdi va yangi kodda",
+      "tests": "sh scripts/test-e2e.sh 73/73 o'tdi; server typecheck + web tsc + vite build o'tdi; extract-keys --missing ru/uz 420/420; brauzerda video yuklash/poster/lightbox tekshirildi",
+      "next_step": "Haqiqiy iPhone/Android'da video yozib sinash"
     }
   ]
 }
