@@ -68,6 +68,14 @@
       "result": "Kod: C:/pti (git yo'q); Hub: commit 6e284b9 (projects/pti.md + INDEX); prodga o'rnatilmadi",
       "tests": "sh scripts/test-e2e.sh: 49/49 o'tdi (soxta Telegram); typecheck o'tdi; haqiqiy Telegramda sinalmagan",
       "next_step": "Bot tokeni + Cloudflare + install-task.ps1, keyin haqiqiy Telegramda sinov"
+    },
+    {
+      "id": "8bef7ce70ce64bbeaff1e6e318bc4ba8",
+      "project": "pti",
+      "owner": "Claude/DESKTOP-QA8B43G/pti-video",
+      "summary": "PTI video rejimi",
+      "status": "active",
+      "started": "2026-10-24T01:53:39+00:00"
     }
   ]
 }
