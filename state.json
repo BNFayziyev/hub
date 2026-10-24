@@ -56,6 +56,14 @@
       "summary": "RTX PC lokal kamera piloti",
       "status": "active",
       "started": "2026-10-15T01:25:35+00:00"
+    },
+    {
+      "id": "74ebc1e8fb1344359a6bcb56893807df",
+      "project": "pti",
+      "owner": "Claude/DESKTOP-QA8B43G/pti1",
+      "summary": "PTI bot yaratildi: karta va indeks",
+      "status": "active",
+      "started": "2026-10-24T01:07:05+00:00"
     }
   ]
 }
